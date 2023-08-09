@@ -68,9 +68,9 @@ const resolver = {
 
 export default function run(element) {
   const strings = [
-    "an enginering student,",
-    "full stack developer in training,",
-    "... and just a wandering soul.",
+    "AN ENGINEERING STUDENT",
+    "FULL STACK DEVELOPER IN TRAINING",
+    "... AND JUST A WANDERING SOUL",
   ];
 
   let counter = 0;

@@ -5,6 +5,7 @@ import About from "./About";
 import Navigation from "../../components/home/Navigation";
 import stringFns from "../../utils/stringFns";
 import Social from "../../components/home/Social";
+import Experiences from "./Experiences";
 
 function Home() {
   const [activeSection, setSection] = useState(null);
@@ -31,11 +32,12 @@ function Home() {
   }, []);
 
   return (
-    <div className="max-w-[1500px] relative min-h-screen mx-auto">
+    <div className="container relative min-h-screen mx-auto">
       <Navigation active={activeSection} />
       <Social />
       <Cover />
       <About makeActive={(page) => setSection(page)} />
+      <Experiences makeActive={(page) => setSection(page)} />
     </div>
   );
 }

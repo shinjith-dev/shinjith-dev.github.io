@@ -11,21 +11,21 @@ function Cover() {
   return (
     <section className="relative w-full h-screen">
       <div
-        className="absolute flex gap-2 h-[100px] flex-col w-[550px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+        className="absolute flex gap-2 tracking-widest flex-col w-[550px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
         // style={{ margin: "0 max(30vw,1rem)" }}
       >
-        <div className="text-lg text-light-800 font-medium transition-all">
-          Hey, I&apos;m
+        <div className="text-xl text-light-dark font-medium transition-all">
+          HEY! I&apos;M
         </div>
-        <div className="text-4xl font-display text-brand font-bold transition-all">
-          Shinjith P R
+        <div className="text-6xl text-brand font-bold tracking-widest text-gradient-light">
+          SHINJITH P R
         </div>
         <div>
           <div
-            className="text-3xl inline font-medium text-light transition-all"
+            className="text-2xl inline font-medium text-light transition-all uppercase"
             ref={textRef}
           />
-          <div className="text-3xl inline font-medium text-light transition-all">
+          <div className="text-2xl inline font-medium text-light transition-all">
             <span className="blink">_</span>
           </div>
         </div>
