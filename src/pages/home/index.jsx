@@ -32,12 +32,14 @@ function Home() {
   }, []);
 
   return (
-    <div className="container relative min-h-screen mx-auto">
-      <Navigation active={activeSection} />
-      <Social />
-      <Cover />
-      <About makeActive={(page) => setSection(page)} />
-      <Experiences makeActive={(page) => setSection(page)} />
+    <div className="w-screen h-full overflow-x-hidden bg-light-lightest">
+      <div className="container relative min-h-screen mx-auto">
+        <Navigation active={activeSection} />
+        <Social />
+        <Cover />
+        <About makeActive={(page) => setSection(page)} />
+        <Experiences makeActive={(page) => setSection(page)} />
+      </div>
     </div>
   );
 }

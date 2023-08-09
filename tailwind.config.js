@@ -7,12 +7,19 @@ export default {
   theme: {
     colors: {
       light: {
-        lighter: "#f5f8f7",
+        lightest: "#f5f8f7",
+        lighter: "#dee9e5",
+        200: "#bed1cd",
         light: "#95b3ac",
+        400: "#678983",
+        500: "#547872",
         DEFAULT: "#425f5b",
-        dark: "#2f403e",
-        darker: "#151e1e",
+        dark: "#374e4b",
+        800: "#2f403e",
+        darker: "#2a3735",
+        darkest: "#151e1e",
       },
+
       brand: {
         lighter: "#fef4f2",
         light: "#fbb6a6",
@@ -20,13 +27,14 @@ export default {
         dark: "#b73b1e",
         darker: "#44160b",
       },
-      "glass-light": {
-        lighter: "rgba(66, 95, 91,0.2)",
-        light: "rgba(66, 95, 91,0.3)",
-        DEFAULT: "rgba(66, 95, 91,0.4)",
-        dark: "rgba(66, 95, 91,0.5)",
-        darker: "rgba(66, 95, 91,0.6)",
+      glass: {
+        lighter: "rgba(255, 255, 255, 0.2)",
+        light: "rgba(255, 255, 255, 0.3)",
+        DEFAULT: "rgba(255, 255, 255, 0.4)",
+        dark: "rgba(255, 255, 255, 0.5)",
+        darker: "rgba(255, 255, 255, 0.6)",
       },
+      lglass: {},
     },
     fontFamily: {
       serif: ["Inter", "serif"],
