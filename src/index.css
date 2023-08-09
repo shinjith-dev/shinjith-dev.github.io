@@ -53,8 +53,8 @@ body,
       to right,
       #2f403e 0%,
       #425f5b 20%,
-      #95b3ac 40%,
-      #425f5b 60%,
+      #95b3ac 80%,
+      #425f5b 90%,
       #2f403e 100%
     )
     0 0 / 100% 100%;
@@ -77,5 +77,13 @@ body,
 }
 
 /* experience card  */
+.experience-card {
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 100px;
+}
+
 .experience-card:hover {
+  transform: translate3d(0px, 0px, 5px);
+  backdrop-filter: "blur(16px) saturate(180%)";
 }

@@ -6,6 +6,8 @@ import Navigation from "../../components/home/Navigation";
 import stringFns from "../../utils/stringFns";
 import Social from "../../components/home/Social";
 import Experiences from "./Experiences";
+import Services from "./Services";
+import Projects from "./Projects";
 
 function Home() {
   const [activeSection, setSection] = useState(null);
@@ -38,7 +40,9 @@ function Home() {
         <Social />
         <Cover />
         <About makeActive={(page) => setSection(page)} />
+        <Services makeActive={(page) => setSection(page)} />
         <Experiences makeActive={(page) => setSection(page)} />
+        <Projects makeActive={(page) => setSection(page)} />
       </div>
     </div>
   );

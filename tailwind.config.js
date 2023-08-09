@@ -34,14 +34,30 @@ export default {
         dark: "rgba(255, 255, 255, 0.5)",
         darker: "rgba(255, 255, 255, 0.6)",
       },
-      lglass: {},
+      lglass: {
+        lightest: "rgba(66, 95, 91, 0.1)",
+        lighter: "rgba(66, 95, 91, 0.2)",
+        light: "rgba(66, 95, 91,0.3)",
+        DEFAULT: "rgba(66, 95, 91,0.4)",
+        dark: "rgba(66, 95, 91,0.5)",
+        darker: "rgba(66, 95, 91,0.6)",
+      },
     },
     fontFamily: {
       serif: ["Inter", "serif"],
       display: ['"Oleo Script"', "cursive"],
       mono: ['"Inconsolata"', "monospace"],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        "spread-xs":
+          "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+        "spread-sm":
+          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+        spread:
+          "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+      },
+    },
   },
   plugins: [],
 };

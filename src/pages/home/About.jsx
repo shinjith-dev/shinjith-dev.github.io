@@ -8,8 +8,12 @@ function About({ makeActive }) {
   useEffect(() => {
     const onScroll = () => {
       if (sectionRef.current) {
-        const { top } = sectionRef.current.getBoundingClientRect();
-        if (window.scrollY >= top + 50) makeActive(thisSection);
+        const { top, bottom } = sectionRef.current.getBoundingClientRect();
+        if (
+          window.scrollY > window.scrollY + top - 400 &&
+          window.scrollY < window.scrollY + bottom - 400
+        )
+          makeActive(thisSection);
       }
     };
 
@@ -30,15 +34,15 @@ function About({ makeActive }) {
         <img
           src={sdev}
           alt="sdev"
-          className="w-[30vw] max-w-[400px] h-auto object-cover object-center"
+          className="w-[25vw] max-w-[350px] h-auto object-cover object-center"
         />
 
         <div className="flex flex-col">
-          <div className="text-9xl font-bold text-center tracking-widest text-glass-light-darker">
+          <div className="text-9xl font-semibold text-center tracking-widest text-lglass-lightest">
             ABOUT
           </div>
-          <div className="text-3xl -translate-y-20 text-center text-light-dark tracking-wider font-medium">
-            <span className="text-brand-dark">HI!</span> I&apos;M SHINJITH
+          <div className="text-3xl -translate-y-20 text-center text-light-dark tracking-widest font-medium">
+            <span className="text-brand-dark">HI,</span> I&apos;M SHINJITH
           </div>
           <div className="max-w-[95%] flex flex-col gap-4 text-light tracking-wide pl-[max(3vw,1rem)]">
             <p>Passionate. Creative. Explorer. Aspiring software developer.</p>
