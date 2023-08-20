@@ -18,23 +18,20 @@ function Experience() {
         href="https://www.tghtech.com/"
         target="_blank"
         rel="noreferrer"
-        className="flex group p-6 gap-1 hover:bg-glass hover:shadow-spread-xs rounded-lg experience-card"
+        className="flex group p-6 gap-5 hover:bg-glass hover:shadow-spread-xs rounded-xl experience-card"
       >
-        <div
-          style={{ flex: "0 1 25%" }}
-          className="text-sm leading-1 text-light"
-        >
+        <div className="text-xs leading-1 text-light font-medium">
           2022 - PRESENT
         </div>
         <div style={{ flex: "1 0 75%" }} className="gap-2 flex flex-col">
-          <div className="text-base leading-none text-light-darkest flex items-center gap-2">
+          <div className="text-base leading-none text-light-darkest flex items-center pb-1 gap-2 font-semibold">
             Frotend Developer &#183; TGH Tech
-            <div className="flex gap-4">
+            <div>
               <BiArrowBack className="rotate-[140deg] -translate-x-[1px] group-hover:translate-x-1 group-hover:-translate-y-[2px] translate-y-[1px] transition-all" />
             </div>
           </div>
 
-          <div className="text-sm text-light leading-none">
+          <div className="text-sm text-light leading-none font-medium">
             Junior Developer
           </div>
 
@@ -50,7 +47,8 @@ function Experience() {
           <div className="flex gap-2 flex-wrap text-sm text-brand">
             {techs.map((tech) => (
               <div
-                className="py-1 px-3 rounded-2xl bg-glass-lighter border-brand-light border"
+                key={tech}
+                className="py-1 px-3 font-mono font-medium rounded-2xl bg-glass-lighter border-brand-light border"
                 style={{
                   backdropFilter: "blur(16px) saturate(180%)",
                 }}

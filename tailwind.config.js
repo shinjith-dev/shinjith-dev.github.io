@@ -19,13 +19,18 @@ export default {
         darker: "#2a3735",
         darkest: "#151e1e",
       },
-
       brand: {
-        lighter: "#fef4f2",
-        light: "#fbb6a6",
+        lightest: "#fef4f2",
+        100: "#fee7e2",
+        lighter: "#fdd5cb",
+        300: "#fbb6a6",
+        light: "#f78c72",
         DEFAULT: "#ee6c4d",
-        dark: "#b73b1e",
-        darker: "#44160b",
+        dark: "#da4a28",
+        700: "#b73b1e",
+        darker: "#98341c",
+        900: "#7e301e",
+        darkest: "#44160b",
       },
       glass: {
         lighter: "rgba(255, 255, 255, 0.2)",
@@ -56,6 +61,8 @@ export default {
           "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
         spread:
           "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+        "spread-lg":
+          "rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
       },
     },
   },

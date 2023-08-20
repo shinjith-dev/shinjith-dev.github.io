@@ -1,10 +1,11 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useRef } from "react";
 import Experience from "../../components/experiences/Experience";
-import experiencesIllus from "../../assets/illus/experiences.svg";
+import experienceIllus from "../../assets/illus/experiences.svg";
 
 function Experiences({ makeActive }) {
   const sectionRef = useRef(null);
-  const thisSection = "Experiences";
+  const thisSection = "Experience";
 
   useEffect(() => {
     const onScroll = () => {
@@ -27,26 +28,26 @@ function Experiences({ makeActive }) {
 
   return (
     <section
-      id="experiences"
+      id="experience"
       ref={sectionRef}
       className="w-full min-h-screen px-6 flex items-center relative p-5"
     >
       <div className="grid grid-cols-2">
         <div className="flex items-center justify-center p-8 pl-16 pt-20">
           <img
-            src={experiencesIllus}
-            alt="experiences"
+            src={experienceIllus}
+            alt="experience"
             className="w-[60%] max-w-md"
           />
         </div>
 
-        {[...new Array(1)].map(() => (
-          <Experience />
+        {[...new Array(1)].map((_, index) => (
+          <Experience key={`experience-${index}`} />
         ))}
       </div>
 
-      <div className="text-8xl font-bold text-center tracking-widest text-lglass-lightest absolute right-0 top-[50px] z-0">
-        EXPERIENCES
+      <div className="text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute left-0 top-[calc(100vh-150px)] z-0">
+        EXPERIENCE
       </div>
     </section>
   );

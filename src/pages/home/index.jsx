@@ -6,7 +6,7 @@ import Navigation from "../../components/home/Navigation";
 import stringFns from "../../utils/stringFns";
 import Social from "../../components/home/Social";
 import Experiences from "./Experiences";
-import Services from "./Services";
+import Services from "./Notes";
 import Projects from "./Projects";
 
 function Home() {
@@ -34,15 +34,15 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-screen h-full overflow-x-hidden bg-light-lightest">
+    <div className="w-screen h-full overflow-x-hidden">
       <div className="container relative min-h-screen mx-auto">
         <Navigation active={activeSection} />
         <Social />
         <Cover />
         <About makeActive={(page) => setSection(page)} />
-        <Services makeActive={(page) => setSection(page)} />
         <Experiences makeActive={(page) => setSection(page)} />
         <Projects makeActive={(page) => setSection(page)} />
+        <Services makeActive={(page) => setSection(page)} />
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ function About({ makeActive }) {
         />
 
         <div className="flex flex-col">
-          <div className="text-9xl font-semibold text-center tracking-widest text-lglass-lightest">
+          <div className="text-9xl font-semibold text-center tracking-widest text-lglass-lighter">
             ABOUT
           </div>
           <div className="text-3xl -translate-y-20 text-center text-light-dark tracking-widest font-medium">

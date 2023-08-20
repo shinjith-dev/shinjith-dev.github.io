@@ -2,7 +2,7 @@
 import React from "react";
 import stringFns from "../../utils/stringFns";
 
-const navs = ["About", "Services", "Experiences", "Projects", "Technologies"];
+const navs = ["About", "Experience", "Projects", "Notes", "Contact"];
 
 const opacityFactor = 0.6 / navs.length;
 
@@ -48,6 +48,7 @@ function Navigation({ active }) {
       <ul className="transition-all ">
         {navs.map((nav, index) => (
           <NavigationItem
+            key={nav}
             nav={nav}
             active={active === nav}
             activeIndex={navs.indexOf(active)}

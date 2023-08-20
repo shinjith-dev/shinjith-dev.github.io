@@ -79,8 +79,6 @@ body,
 /* experience card  */
 .experience-card {
   transition: all 0.3s ease-in-out;
-  transform-style: preserve-3d;
-  perspective: 100px;
 }
 
 .experience-card:hover {
