@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
         </div>
 
         <div className="bg-light-dark shadow-spread-sm px-5 pt-3 pb-8 -mt-6 group-hover:-mt-7 group-hover:pb-9 transition-all duration-300 z-10 relative rounded-t-xl">
-          <div className="text-lg font-medium text-light-lightest">
+          <div className="md:text-lg font-medium text-light-lightest">
             {project?.name}
           </div>
           <div className="flex gap-2 text-xs text-light-light flex-wrap">
@@ -25,7 +25,7 @@ function ProjectCard({ project }) {
         </div>
 
         <div className="bg-light px-5 py-4 shadow-spread-xs -mt-6 transition-all duration-300 z-10 relative rounded-xl">
-          <div className="text-sm text-light-lightest">
+          <div className="text-xs md:text-sm text-light-lightest">
             {project.description.map((desc, index) => (
               <>
                 <p>{desc}</p>

@@ -30,10 +30,10 @@ function Experiences({ makeActive }) {
     <section
       id="experience"
       ref={sectionRef}
-      className="w-full min-h-screen px-6 flex items-center relative p-5"
+      className="w-full min-h-screen flex flex-col items-center relative py-0 sm:py-3 md:py-5"
     >
-      <div className="grid grid-cols-2">
-        <div className="flex items-center justify-center p-8 pl-16 pt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="items-center justify-center hidden md:flex p-8 pl-16 pt-20">
           <img
             src={experienceIllus}
             alt="experience"
@@ -41,12 +41,26 @@ function Experiences({ makeActive }) {
           />
         </div>
 
-        {[...new Array(1)].map((_, index) => (
-          <Experience key={`experience-${index}`} />
-        ))}
+        <div>
+          {[...new Array(1)].map((_, index) => (
+            <Experience key={`experience-${index}`} />
+          ))}
+
+          <div className="text-sm md:text-base text-light-darker hover:text-light-darkest transition-all text-end">
+            <a
+              href="https://res.cloudinary.com/dqts6qgre/image/upload/v1692633804/sdev/resumesdev_s1sz0f.pdf"
+              download="resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              download resume
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div className="text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute left-0 top-[calc(100vh-150px)] z-0">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute left-0 top-[calc(100vh-150px)] z-0">
         EXPERIENCE
       </div>
     </section>

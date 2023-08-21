@@ -18,12 +18,15 @@ function Experience() {
         href="https://www.tghtech.com/"
         target="_blank"
         rel="noreferrer"
-        className="flex group p-6 gap-5 hover:bg-glass hover:shadow-spread-xs rounded-xl experience-card"
+        className="flex group p-5 md:p-6 gap-5 hover:bg-glass hover:shadow-spread-xs rounded-xl experience-card"
       >
         <div className="text-xs leading-1 text-light font-medium">
           2022 - PRESENT
         </div>
-        <div style={{ flex: "1 0 75%" }} className="gap-2 flex flex-col">
+        <div
+          style={{ flex: "1 0 75%" }}
+          className="gap-1.5 md:gap-2 flex flex-col"
+        >
           <div className="text-base leading-none text-light-darkest flex items-center pb-1 gap-2 font-semibold">
             Frotend Developer &#183; TGH Tech
             <div>
@@ -31,11 +34,11 @@ function Experience() {
             </div>
           </div>
 
-          <div className="text-sm text-light leading-none font-medium">
+          <div className="text-xs md:text-sm text-light leading-none font-medium">
             Junior Developer
           </div>
 
-          <div className="text-light-dark text-sm my-1">
+          <div className="text-light-dark text-xs sm:text-sm my-1">
             I spent over 6 months at TGH Tech as a Frontend Web Developer,
             crafting web interfaces for startups and mid-sized businesses. This
             role allowed me to master coding techniques and strategic approaches
@@ -44,7 +47,7 @@ function Experience() {
             and hands-on manner.
           </div>
 
-          <div className="flex gap-2 flex-wrap text-sm text-brand">
+          <div className="flex gap-1.5 md:gap-2 flex-wrap text-xs md:text-sm text-brand">
             {techs.map((tech) => (
               <div
                 key={tech}

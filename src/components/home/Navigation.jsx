@@ -4,7 +4,7 @@ import stringFns from "../../utils/stringFns";
 
 const navs = ["About", "Experience", "Projects", "Notes", "Contact"];
 
-const opacityFactor = 0.6 / navs.length;
+const opacityFactor = 0.5 / navs.length;
 
 function NavigationItem({ nav, active, activeIndex, index }) {
   const path = stringFns.toKebabCase(nav);
@@ -23,11 +23,11 @@ function NavigationItem({ nav, active, activeIndex, index }) {
         className="flex items-center gap-2"
       >
         <div
-          className={`transition-all h-0.5 bg-light-darker rounded-md ${
+          className={`transition-all h-0.5 bg-light-darkest rounded-md ${
             active ? "w-6" : "w-2 group-hover:w-6"
           }`}
         />
-        <div className="transition-all text-sm text-light-darker">{nav}</div>
+        <div className="transition-all text-sm text-light-darkest">{nav}</div>
       </a>
     </li>
   );
@@ -35,17 +35,17 @@ function NavigationItem({ nav, active, activeIndex, index }) {
 
 function Navigation({ active }) {
   return (
-    <nav className="fixed left-0 lg:left-[calc(50vw-512px)] xl:left-[calc(50vw-640px)] 2xl:left-[calc(50vw-768px)] hidden lg:block top-0 pt-6 ml-4 z-50">
-      <div className="mb-2">
+    <nav className="fixed left-0 lg:left-[calc(50vw-512px)] xl:left-[calc(50vw-640px)] 2xl:left-[calc(50vw-768px)] top-0 pt-4 ml-4 z-[999]">
+      <div className="mb-4">
         <a
           href="/"
-          className="text-2xl font-semibold text-brand flex items-baseline font-mono"
+          className="text-base sm:text-lg md:text-2xl font-semibold text-brand flex items-baseline font-mono leading-none"
         >
           /shinjith-dev<span className="blink">_</span>
         </a>
       </div>
 
-      <ul className="transition-all ">
+      <ul className="transition-all hidden lg:block">
         {navs.map((nav, index) => (
           <NavigationItem
             key={nav}

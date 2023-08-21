@@ -51,11 +51,11 @@ body,
 .text-gradient-light {
   background: linear-gradient(
       to right,
-      #2f403e 0%,
-      #425f5b 20%,
-      #95b3ac 80%,
-      #425f5b 90%,
-      #2f403e 100%
+      #2a3735 0%,
+      #374e4b 20%,
+      #678983 80%,
+      #374e4b 90%,
+      #2a3735 100%
     )
     0 0 / 100% 100%;
   color: white;
@@ -83,5 +83,5 @@ body,
 
 .experience-card:hover {
   transform: translate3d(0px, 0px, 5px);
-  backdrop-filter: "blur(16px) saturate(180%)";
+  backdrop-filter: blur(16px) saturate(180%);
 }

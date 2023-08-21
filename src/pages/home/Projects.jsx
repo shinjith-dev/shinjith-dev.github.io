@@ -7,7 +7,6 @@ function Projects({ makeActive }) {
   const { projects } = useProjects();
   const sectionRef = useRef(null);
   const thisSection = "Projects";
-  console.log(projects);
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,10 +31,10 @@ function Projects({ makeActive }) {
     <section
       id="projects"
       ref={sectionRef}
-      className="w-full min-h-screen relative p-5 px-20"
+      className="w-full min-h-screen relative py-5"
     >
-      <div className="mt-40 2xl:mt-48 max-w-5xl mx-auto w-full">
-        <div className="grid grid-cols-1 w-full h-full gap-20 mb-40">
+      <div className="my-28 md:mb-0 md:mt-40 2xl:mt-48 max-w-5xl mx-auto w-full">
+        <div className="grid grid-cols-1 w-full h-full gap-4 sm:gap-10 md:gap-20 mb-10 sm:mb-16 md:mb-40">
           {projects &&
             projects
               .filter((project) => project.featured)
@@ -48,10 +47,11 @@ function Projects({ makeActive }) {
               ))}
         </div>
 
-        <div className="text-3xl my-2 text-light-darkest font-semibold text-gradient-light">
+        <div className="text-2xl md:text-3xl my-1 md:my-2 text-light-darkest font-semibold text-gradient-light">
           Other Noteworthy Projects
         </div>
-        <div className="grid grid-cols-3 w-full h-full gap-x-8 mt-14 mb-2">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full h-full gap-x-6 md:gap-x-8 mt-14 mb-2">
           {projects &&
             projects
               .filter((project) => project.highlight)
@@ -60,14 +60,14 @@ function Projects({ makeActive }) {
               ))}
         </div>
 
-        <div className="text-lg text-brand-dark text-center">
+        <div className="text-base md:text-lg text-brand-dark text-center">
           <a href="/projects" className="underline">
             view the archive
           </a>
         </div>
       </div>
 
-      <div className="text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute right-0 top-[50px] z-0">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute right-0 top-[50px] z-0">
         PROJECTS
       </div>
     </section>
