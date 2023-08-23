@@ -2,7 +2,7 @@
 import React from "react";
 import stringFns from "../../utils/stringFns";
 
-const navs = ["About", "Experience", "Projects", "Notes", "Contact"];
+const navs = ["About", "Experience", "Projects", "Services", "Contact"];
 
 const opacityFactor = 0.5 / navs.length;
 

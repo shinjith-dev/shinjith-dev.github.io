@@ -11,6 +11,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "../../components/home/Footer";
 import Header from "../../components/home/Header";
+import Services from "./Services";
 
 function Home() {
   const [activeSection, setSection] = useState(null);
@@ -46,7 +47,8 @@ function Home() {
         <About makeActive={(page) => setSection(page)} />
         <Experiences makeActive={(page) => setSection(page)} />
         <Projects makeActive={(page) => setSection(page)} />
-        <Notes makeActive={(page) => setSection(page)} />
+        {/* <Notes makeActive={(page) => setSection(page)} /> */}
+        <Services makeActive={(page) => setSection(page)} />
         <Contact makeActive={(page) => setSection(page)} />
         <Footer />
       </div>
