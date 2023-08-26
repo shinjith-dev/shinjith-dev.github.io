@@ -40,16 +40,16 @@ function Project({ project, left = true }) {
       <div
         className={`${
           left ? "sm:-mr-28 text-start" : "sm:-ml-28 text-end"
-        } w-full p-5 sm:p-0 sm:w-[70%] h-fit z-10 relative flex flex-col bg-light/90 sm:bg-[transparent] rounded-2xl`}
+        } w-full p-5 sm:p-0 sm:w-[70%] h-fit z-10 relative flex flex-col bg-light/90 dark:bg-dark-900/90 sm:bg-[transparent] dark:sm:bg-[transparent] rounded-2xl transition-all`}
       >
-        <div className="text-brand-lighter sm:text-brand-dark text-xs md:text-sm">
+        <div className="text-brand-lighter sm:text-brand-dark text-xs md:text-sm dark:text-brand-lighter transition-all">
           Featured
         </div>
-        <div className="text-lg sm:text-xl font-medium mb-1 md:mb-2 text-light-lightest sm:text-light-darkest">
+        <div className="text-lg sm:text-xl font-medium mb-1 md:mb-2 text-light-lightest sm:text-light-darkest dark:text-dark-50 transition-all">
           {project.name}
         </div>
 
-        <div className="w-fit h-fit text-light-lighter sm:text-light-lightest sm:hover:bg-light-dark transition-all text-xs sm:text-sm sm:bg-light sm:p-4 md:p-5 rounded sm:hover:shadow-spread-sm">
+        <div className="w-fit h-fit text-light-lighter dark:text-dark-300 sm:text-light-lightest dark:sm:text-dark-200 sm:hover:bg-light-dark transition-all text-xs sm:text-sm sm:bg-light sm:p-4 md:p-5 rounded sm:hover:shadow-spread-sm dark:sm:bg-dark-900 dark:sm:hover:bg-dark-900">
           {project.description.map((desc, index) => (
             <>
               <p>{desc}</p>
@@ -65,7 +65,7 @@ function Project({ project, left = true }) {
           {project?.technologies.map((tech) => (
             <div
               key={tech}
-              className="py-1 px-3 font-mono font-medium rounded-2xl sm:bg-light-lighter border border-light-light text-xs md:text-sm"
+              className="py-1 px-3 font-mono font-medium rounded-2xl sm:bg-light/10 transition-all dark:sm:bg-dark-900/10 border border-light-light dark:border-dark-600 dark:sm:border-dark-900 dark:text-dark-300 text-xs md:text-sm"
               style={{
                 backdropFilter: "blur(16px) saturate(180%)",
               }}
@@ -76,7 +76,7 @@ function Project({ project, left = true }) {
         </div>
 
         <div
-          className={`flex justify-end gap-3 flex-wrap text-xl ${
+          className={`flex justify-end gap-2 sm:gap-3 flex-wrap text-base sm:text-xl ${
             left ? "flex-row-reverse" : ""
           }`}
         >
@@ -85,7 +85,7 @@ function Project({ project, left = true }) {
               href={project?.live_url}
               target="_blank"
               rel="noreferrer"
-              className="sm:hover:text-light-darkest sm:text-light text-light-lighter hover:text-light-lightest"
+              className="sm:hover:text-light-darkest sm:text-light text-light-lighter dark:text-dark-300 hover:text-light-lightest transition-all dark:hover:text-dark-50"
             >
               <PiLink />
             </a>
@@ -95,7 +95,7 @@ function Project({ project, left = true }) {
               href={project?.github_url}
               target="_blank"
               rel="noreferrer"
-              className="sm:hover:text-light-darkest sm:text-light text-light-lighter hover:text-light-lightest"
+              className="sm:hover:text-light-darkest sm:text-light text-light-lighter hover:text-light-lightest dark:text-dark-300 dark:hover:text-dark-50 transition-all"
             >
               <PiGithubLogoFill />
             </a>

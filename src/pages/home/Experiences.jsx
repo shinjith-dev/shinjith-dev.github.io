@@ -30,9 +30,9 @@ function Experiences({ makeActive }) {
     <section
       id="experience"
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col items-center relative py-0 sm:py-3 md:py-5"
+      className="w-full min-h-screen flex flex-col items-center justify-center relative py-0 sm:py-3 md:py-5"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="items-center justify-center hidden md:flex p-8 pl-16 pt-20">
           <img
             src={experienceIllus}
@@ -46,7 +46,7 @@ function Experiences({ makeActive }) {
             <Experience key={`experience-${index}`} />
           ))}
 
-          <div className="text-sm md:text-base text-light-darker hover:text-light-darkest transition-all text-end">
+          <div className="text-sm md:text-base text-light-darker hover:text-light-darkest transition-all text-end dark:text-dark-500">
             <a
               href="https://res.cloudinary.com/dqts6qgre/image/upload/v1692633804/sdev/resumesdev_s1sz0f.pdf"
               download="resume.pdf"
@@ -60,7 +60,7 @@ function Experiences({ makeActive }) {
         </div>
       </div>
 
-      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute left-0 top-[calc(100vh-150px)] z-0">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute left-0 top-[calc(100vh-150px)] z-0 transition-all">
         EXPERIENCE
       </div>
     </section>

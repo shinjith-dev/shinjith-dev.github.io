@@ -34,12 +34,18 @@ function Card({ card }) {
   return (
     <div
       style={{ backdropFilter: "blur(16px) saturate(180%)" }}
-      className="border shadow-sm border-light/40 rounded-lg p-5 w-[min(90vw,280px)] h-[min(90vw,300px)] sm:w-[min(40vw,250px)] sm:h-[min(50vw,280px)] lg:w-[min(20vw,220px)] lg:h-[min(25vw,280px)] xl:w-[min(20vw,250px)] xl:h-[min(25vw,280px)] flex flex-col gap-1 justify-end from-[#95b3ac]/10 to-transparent bg-gradient-to-tr"
+      className="border shadow-sm border-light/40 dark:border-dark-950/40 rounded-lg p-3 sm:p-5 h-[min(85vw,210px)] pt-8 flex flex-col gap-1 justify-end from-[#95b3ac]/10 dark:from-dark-900/75 to-[#fff]/25 dark:to-dark-900/25 bg-light-lighter/25 dark:bg-dark-900/25 bg-gradient-to-tr transition-all"
     >
-      <div className="text-2xl mb-2 text-light-darkest">{card.icon}</div>
+      <div className="text-lg sm:text-xl md:text-2xl mb-2 text-light-darkest dark:text-dark-200 transition-all">
+        {card.icon}
+      </div>
 
-      <div className="text-lg font-medium text-light-darkest">{card.title}</div>
-      <div className="text-sm text-light-darker">{card.description}</div>
+      <div className="text-sm sm:text-base md:text-lg font-medium text-light-darkest dark:text-dark-200 transition-all">
+        {card.title}
+      </div>
+      <div className="text-xs sm:text-sm text-light-darker dark:text-dark-400 transition-all">
+        {card.description}
+      </div>
     </div>
   );
 }
@@ -74,17 +80,17 @@ function Services({ makeActive }) {
       className="w-full min-h-screen flex flex-col justify-center items-center relative py-5"
     >
       <div className="max-w-7xl">
-        <div className="text-2xl md:text-3xl my-2 text-light-darkest font-semibold text-gradient-light w-full">
+        <div className="text-2xl md:text-3xl my-2 text-light-darkest font-semibold text-gradient-light dark:text-gradient-dark w-full transition-all">
           What I do
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 xl:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
           {content.map((card) => (
             <Card card={card} />
           ))}
         </div>
       </div>
 
-      <div className="text-6xl sm:text-7xl md:text-9xl font-bold text-center tracking-widest text-lglass-lighter absolute left-0 top-[calc(100vh-150px)] z-0">
+      <div className="text-6xl sm:text-7xl md:text-9xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute left-0 top-[calc(100vh-150px)] z-0 transition-all">
         SERVICES
       </div>
     </section>

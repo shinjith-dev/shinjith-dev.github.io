@@ -65,6 +65,23 @@ body,
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-light {
+  background: linear-gradient(
+      to right,
+      #606472 0%,
+      #797c88 20%,
+      #92959f 80%,
+      #797c88 90%,
+      #606472 100%
+    )
+    0 0 / 100% 100%;
+  color: #92959f;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-animation {
   animation: shine 1s linear infinite;
   animation-direction: alternate;
@@ -83,5 +100,5 @@ body,
 
 .experience-card:hover {
   transform: translate3d(0px, 0px, 5px);
-  backdrop-filter: blur(16px) saturate(180%);
+  /* backdrop-filter: blur(16px) saturate(180%); */
 }

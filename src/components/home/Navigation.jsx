@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import stringFns from "../../utils/stringFns";
 
 const navs = ["About", "Experience", "Projects", "Services", "Contact"];
@@ -23,28 +23,37 @@ function NavigationItem({ nav, active, activeIndex, index }) {
         className="flex items-center gap-2"
       >
         <div
-          className={`transition-all h-0.5 bg-light-darkest rounded-md ${
+          className={`transition-all duration-300 h-0.5 bg-light-darkest dark:bg-dark-200 rounded-md ${
             active ? "w-6" : "w-2 group-hover:w-6"
           }`}
         />
-        <div className="transition-all text-sm text-light-darkest">{nav}</div>
+        <div className="transition-all duration-300 text-sm text-light-darkest dark:text-dark-200">
+          {nav}
+        </div>
       </a>
     </li>
   );
 }
 
 function Navigation({ active }) {
-  return (
-    <nav className="fixed left-0 lg:left-[calc(50vw-512px)] xl:left-[calc(50vw-640px)] 2xl:left-[calc(50vw-768px)] top-0 pt-4 ml-4 z-[999]">
-      <div className="mb-4">
-        <a
-          href="/"
-          className="text-base sm:text-lg md:text-2xl font-semibold text-brand flex items-baseline font-mono leading-none"
-        >
-          /shinjith-dev<span className="blink">_</span>
-        </a>
-      </div>
+  const [haveBg, setHaveBg] = useState(false);
 
+  useEffect(() => {
+    const checkPosition = () => {
+      if (window.scrollY > 200) setHaveBg(true);
+      else setHaveBg(false);
+    };
+    window.addEventListener("scroll", checkPosition);
+
+    return () => window.removeEventListener("scroll", checkPosition);
+  }, []);
+
+  return (
+    <nav
+      className={`transition-all duration-500 fixed left-0 lg:left-[calc(50vw-512px)] xl:left-[calc(50vw-640px)] 2xl:left-[calc(50vw-768px)] pl-12 pt-4 ml-4 z-[999] ${
+        haveBg ? "top-16" : "top-10"
+      }`}
+    >
       <ul className="transition-all hidden lg:block">
         {navs.map((nav, index) => (
           <NavigationItem

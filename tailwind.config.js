@@ -4,6 +4,7 @@
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     colors: {
       light: {
@@ -32,20 +33,18 @@ export default {
         900: "#7e301e",
         darkest: "#44160b",
       },
-      glass: {
-        lighter: "rgba(255, 255, 255, 0.2)",
-        light: "rgba(255, 255, 255, 0.3)",
-        DEFAULT: "rgba(255, 255, 255, 0.4)",
-        dark: "rgba(255, 255, 255, 0.5)",
-        darker: "rgba(255, 255, 255, 0.6)",
-      },
-      lglass: {
-        lightest: "rgba(66, 95, 91, 0.1)",
-        lighter: "rgba(66, 95, 91, 0.2)",
-        light: "rgba(66, 95, 91,0.3)",
-        DEFAULT: "rgba(66, 95, 91,0.4)",
-        dark: "rgba(66, 95, 91,0.5)",
-        darker: "rgba(66, 95, 91,0.6)",
+      dark: {
+        950: "#1c2335",
+        900: "#323749",
+        800: "#484d5d",
+        700: "#606472",
+        600: "#797c88",
+        500: "#92959f",
+        50: "#f6f6f7",
+        100: "#eef0f1",
+        200: "#e0e2e5",
+        300: "#cdd0d4",
+        400: "#b7bbc2",
       },
     },
     fontFamily: {

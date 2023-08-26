@@ -47,11 +47,11 @@ function Projects({ makeActive }) {
               ))}
         </div>
 
-        <div className="text-2xl md:text-3xl my-1 md:my-2 text-light-darkest font-semibold text-gradient-light">
+        <div className="text-2xl md:text-3xl my-1 md:my-2 text-light-darkest font-semibold text-gradient-light dark:text-gradient-dark transition-all">
           Other Noteworthy Projects
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full h-full gap-x-6 md:gap-x-8 mt-14 mb-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full h-full gap-x-6 md:gap-x-8 mt-6 mb-1">
           {projects &&
             projects
               .filter((project) => project.highlight)
@@ -60,14 +60,14 @@ function Projects({ makeActive }) {
               ))}
         </div>
 
-        <div className="text-base md:text-lg text-brand-dark text-center">
+        <div className="text-base md:text-lg text-brand-dark text-center dark:text-dark-500 transition-all">
           <a href="/projects" className="underline">
             view the archive
           </a>
         </div>
       </div>
 
-      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-lglass-lighter absolute right-0 top-[50px] z-0">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute right-0 top-[50px] z-0 transition-all">
         PROJECTS
       </div>
     </section>

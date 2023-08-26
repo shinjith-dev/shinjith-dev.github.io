@@ -6,7 +6,6 @@ import Navigation from "../../components/home/Navigation";
 import stringFns from "../../utils/stringFns";
 import Social from "../../components/home/Social";
 import Experiences from "./Experiences";
-import Notes from "./Notes";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "../../components/home/Footer";
@@ -38,7 +37,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-screen h-full overflow-x-hidden">
+    <div className="w-screen h-full overflow-x-hidden dark:bg-dark-950 transition-all duration-500">
       <div className="container relative mx-auto px-4 sm:px-10 md:px-16">
         <Navigation active={activeSection} />
         <Header />
