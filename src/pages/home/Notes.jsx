@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import Note from "../../components/notes/Note";
+import Note from "../../components/home/notes/Note";
 
 function Notes({ makeActive }) {
   const sectionRef = useRef(null);

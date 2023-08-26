@@ -19,13 +19,13 @@ function NavLinks() {
       >
         Projects
       </a>
-      &middot;
+      {/* &middot;
       <a
         href="/notes"
         className="hover:text-light-darkest dark:hover:text-dark-50 hover:underline transition-all"
       >
         Notes
-      </a>
+      </a> */}
     </div>
   );
 }

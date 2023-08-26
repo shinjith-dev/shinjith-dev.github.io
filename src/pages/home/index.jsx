@@ -8,8 +8,8 @@ import Social from "../../components/home/Social";
 import Experiences from "./Experiences";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Footer from "../../components/home/Footer";
-import Header from "../../components/home/Header";
+import Footer from "../../components/common/Footer";
+import Header from "../../components/common/Header";
 import Services from "./Services";
 
 function Home() {

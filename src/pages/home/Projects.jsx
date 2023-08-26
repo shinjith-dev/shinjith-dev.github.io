@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import Project from "../../components/projects/Project";
-import ProjectCard from "../../components/projects/ProjectCard";
+import Project from "../../components/home/projects/Project";
+import ProjectCard from "../../components/home/projects/ProjectCard";
 import useProjects from "../../components/hooks/useProjects";
 
 function Projects({ makeActive }) {

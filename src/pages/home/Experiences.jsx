@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useRef } from "react";
-import Experience from "../../components/experiences/Experience";
+import Experience from "../../components/home/experiences/Experience";
 import experienceIllus from "../../assets/illus/experiences.svg";
 
 function Experiences({ makeActive }) {

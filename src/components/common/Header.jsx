@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdDarkMode, MdDevices, MdLightMode } from "react-icons/md";
-import NavLinks from "../common/NavLinks";
+import NavLinks from "./NavLinks";
 import useDarkMode from "../hooks/useDarkMode";
 
 function Header() {
@@ -47,7 +47,7 @@ function Header() {
 
   return (
     <div
-      className={`fixed top-0 right-0 left-0 w-screen py-4 text-xs sm:text-sm z-50  transition-all duration-500 ${
+      className={`fixed top-0 right-0 left-0 w-screen py-4 text-sm z-50  transition-all duration-500 ${
         haveBg
           ? "dark:bg-[rgba(28,35,53,0.75)] bg-[rgba(255,255,255,0.25)]"
           : ""
