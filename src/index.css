@@ -11,6 +11,8 @@ body,
   width: 100vw !important;
   overflow-x: hidden;
   font-family: "Rubik", serif;
+  position: relative;
+  z-index: -3;
 }
 
 /* cursor blink animation */
@@ -65,7 +67,7 @@ body,
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-light {
+.dark .text-gradient-light {
   background: linear-gradient(
       to right,
       #606472 0%,
@@ -101,4 +103,50 @@ body,
 .experience-card:hover {
   transform: translate3d(0px, 0px, 5px);
   /* backdrop-filter: blur(16px) saturate(180%); */
+}
+
+/* radius effect */
+@media (hover: hover) {
+  .radius-effect {
+    position: relative;
+    background-color: #fff;
+    z-index: -2;
+    overflow: hidden;
+  }
+
+  .radius-effect::before {
+    content: "";
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    top: calc(var(--y, 0) * 1px - 25vw);
+    left: calc(var(--x, 0) * 1px - 25vw);
+    transition: all 0.1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    z-index: -1;
+    /* background: rgb(66, 95, 91); */
+    background: radial-gradient(
+      circle,
+      rgba(149, 179, 172, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  }
+
+  .dark .radius-effect::before {
+    content: "";
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    top: calc(var(--y, 0) * 1px - 25vw);
+    left: calc(var(--x, 0) * 1px - 25vw);
+    transition: all 0.1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    z-index: -1;
+    /* background: rgb(66, 95, 91); */
+    background: radial-gradient(
+      circle,
+      rgba(50, 55, 73, 0.75) 0%,
+      rgba(50, 55, 73, 0) 70%
+    );
+  }
 }

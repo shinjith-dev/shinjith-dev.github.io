@@ -5,7 +5,7 @@ import { PiGithubLogoFill } from "react-icons/pi";
 function ProjectItem({ project, isLast = false }) {
   const date = new Date(project.created_at);
   const dateString = `${String(date.getMonth()).padStart(2, "0")}/${String(
-    date.getFullYear()
+    date.getFullYear(),
   ).slice(2)}`;
   return (
     <tr className="hover:bg-light-lightest dark:hover:bg-dark-900/50">

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Projects from "./pages/Projects";
+import Loader from "./components/common/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) return <Loader pageLoaded={() => setLoading(false)} />;
+
   return (
     <Routes>
       <Route index element={<Home />} />

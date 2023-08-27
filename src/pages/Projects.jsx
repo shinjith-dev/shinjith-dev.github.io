@@ -6,7 +6,7 @@ import useDarkMode from "../components/hooks/useDarkMode";
 
 function Projects() {
   const { projects } = useProjects();
-  const { mode } = useDarkMode();
+  useDarkMode();
 
   return (
     <div className="w-screen min-h-screen h-full overflow-x-hidden dark:bg-dark-950 transition-all duration-500">

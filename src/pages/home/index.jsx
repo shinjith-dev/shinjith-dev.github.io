@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Cover from "./Cover";
 import About from "./About";
@@ -15,6 +15,7 @@ import Services from "./Services";
 function Home() {
   const [activeSection, setSection] = useState(null);
   const location = useLocation();
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -36,9 +37,36 @@ function Home() {
     setSection(section);
   }, []);
 
+  function mouseListener(e) {
+    const { scrollY } = window;
+    containerRef.current.style.setProperty("--x", e.clientX);
+    containerRef.current.style.setProperty("--y", e.clientY + scrollY);
+  }
+
+  const scrollListener = () => {
+    const x = containerRef.current.style.getPropertyValue("--x");
+    const y = containerRef.current.style.getPropertyValue("--y");
+    const { scrollY } = window;
+    containerRef.current.style.setProperty("--x", x);
+    containerRef.current.style.setProperty("--y", y + scrollY);
+  };
+
+  React.useEffect(() => {
+    document.addEventListener("mousemove", mouseListener);
+    document.addEventListener("scroll", scrollListener);
+
+    return () => {
+      document.removeEventListener("mousemove", mouseListener);
+      document.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
+
   return (
-    <div className="w-screen h-full overflow-x-hidden dark:bg-dark-950 transition-all duration-500">
-      <div className="container relative mx-auto px-4 sm:px-10 md:px-16">
+    <div
+      className="w-screen h-full dark:bg-dark-950 radius-effect"
+      ref={containerRef}
+    >
+      <div className="container relative mx-auto px-4 sm:px-10 md:px-16 z-10">
         <Navigation active={activeSection} />
         <Header />
         <Social />
