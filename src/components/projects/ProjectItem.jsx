@@ -8,10 +8,10 @@ function ProjectItem({ project, isLast = false }) {
     date.getFullYear()
   ).slice(2)}`;
   return (
-    <tr className="dark:hover:bg-dark-900/50">
+    <tr className="hover:bg-light-lightest dark:hover:bg-dark-900/50">
       <td
         width={20}
-        className={`border-dark-900 py-3 text-dark-500 pr-2 ${
+        className={`border-light-lighter dark:border-dark-900 py-3 text-light dark:text-dark-500 align-top pr-4 ${
           !isLast ? "border-b" : ""
         }`}
       >
@@ -19,7 +19,7 @@ function ProjectItem({ project, isLast = false }) {
       </td>
 
       <td
-        className={`items-center group gap-2 font-medium border-dark-900 py-3 hidden sm:flex ${
+        className={`items-center group gap-2 font-medium border-light-lighter dark:border-dark-900 py-3 hidden md:table-cell align-top pr-4 ${
           !isLast ? "border-b" : ""
         }`}
       >
@@ -27,7 +27,7 @@ function ProjectItem({ project, isLast = false }) {
       </td>
 
       <td
-        className={`items-center group font-medium border-dark-900 py-1 sm:hidden ${
+        className={`items-center group font-medium border-light-lighter dark:border-dark-900 py-1 md:hidden align-top pr-4 ${
           !isLast ? "border-b" : ""
         }`}
       >
@@ -43,8 +43,29 @@ function ProjectItem({ project, isLast = false }) {
       </td>
 
       <td
-        width={20}
-        className={`border-dark-900 hidden sm:table-cell py-1 ${
+        width={300}
+        className={`border-light-lighter dark:border-dark-900 py-3 align-top pr-4 hidden sm:table-cell ${
+          !isLast ? "border-b" : ""
+        }`}
+      >
+        <div className="flex flex-wrap gap-1.5">
+          {project?.technologies.map((tech) => (
+            <div
+              key={tech}
+              className="py-1 px-3 font-mono font-semibold rounded-2xl bg-brand-lighter/25 text-brand dark:bg-brand-lightest/25 dark:text-brand-lightest text-xs md:text-sm"
+              style={{
+                backdropFilter: "blur(16px) saturate(180%)",
+              }}
+            >
+              {tech}
+            </div>
+          ))}
+        </div>
+      </td>
+
+      <td
+        width={210}
+        className={`border-light-lighter dark:border-dark-900 text-light dark:text-dark-500 align-top hidden md:table-cell py-1 ${
           !isLast ? "border-b" : ""
         }`}
       >
@@ -53,8 +74,11 @@ function ProjectItem({ project, isLast = false }) {
             href={project?.live_url}
             target="_blank"
             rel="noreferrer"
-            className="transition-all group"
+            className="transition-all group text-sm flex items-center flex-nowrap "
           >
+            <div className="whitespace-nowrap max-w-[200px] overflow-hidden text-ellipsis">
+              {project.live_url}
+            </div>
             <BiArrowBack className="rotate-[140deg] m-2 -translate-x-[1px] translate-y-[1px] group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
           </a>
         ) : (
@@ -63,8 +87,11 @@ function ProjectItem({ project, isLast = false }) {
               href={project?.github_url}
               target="_blank"
               rel="noreferrer"
-              className="transition-all"
+              className="transition-all group text-sm flex items-center flex-nowrap "
             >
+              <div className="whitespace-nowrap max-w-[200px] overflow-hidden text-ellipsis">
+                {project.github_url}
+              </div>
               <PiGithubLogoFill className="m-2" />
             </a>
           )
