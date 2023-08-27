@@ -4,7 +4,7 @@ import axios from "../../utils/axios";
 import "react-circular-progressbar/dist/styles.css";
 
 function Loader({ pageLoaded }) {
-  const [loaded, setLoaded] = useState({ animation: false, sdev: false });
+  const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -14,37 +14,51 @@ function Loader({ pageLoaded }) {
         onDownloadProgress: (progressEvent) => {
           const total = progressEvent?.bytes || 1;
           const loadedBytes = progressEvent?.loaded || 0;
-          const axiosProgress = Math.ceil(loadedBytes / total) * 100;
-          setProgress(axiosProgress);
+          const axiosProgress =
+            Math.ceil(loadedBytes / total) * (100 - 95) + 95;
+          if (progress >= 94) setProgress(axiosProgress);
         },
       })
       .then(() => {
-        setLoaded((prev) => ({ ...prev, sdev: true }));
+        setLoaded(true);
+        if (progress >= 94) setProgress(100);
         setLoading(false);
+        localStorage.setItem("loaded", true);
       })
-      .catch((err) => {
+      .catch(() => {
         setLoading(false);
+        localStorage.setItem("loaded", false);
       });
   };
 
   useEffect(() => {
-    const onAnimated = () =>
-      setLoaded((prev) => ({ ...prev, animation: true }));
-    const timeoutId = setTimeout(onAnimated, 2000);
-
-    setLoading(true);
-    startServer();
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    if (!localStorage.getItem("loaded")) {
+      setLoading(true);
+      startServer();
+    } else pageLoaded();
   }, []);
 
-  useEffect(() => {
-    if (loaded.animation && loaded.sdev) pageLoaded();
-  }, [loaded]);
+  const min = (a, b) => (a < b ? a : b);
 
-  if (!loaded.animation || loading)
+  useEffect(() => {
+    console.log(loaded, progress, progress >= 100);
+    if (loaded && progress >= 100) pageLoaded();
+  }, [loaded, progress]);
+
+  useEffect(() => {
+    let intervalId = null;
+    if (!intervalId) {
+      intervalId = setInterval(() => {
+        setProgress((prev) => (prev === 0 ? 15 : prev + min(prev / 3, 15)));
+      }, 400);
+    }
+
+    if (progress >= 94 && !loading) clearInterval(intervalId);
+
+    return () => clearInterval(intervalId);
+  }, [loading]);
+
+  if (!loaded.animation || loading || progress < 100)
     return (
       <div className="h-screen w-screen overflow-hidden bg-dark-950 flex items-center justify-center transition-all">
         <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
@@ -59,7 +73,7 @@ function Loader({ pageLoaded }) {
                 strokeLinecap: "butt",
                 // Customize transition animation
                 transition:
-                  "stroke-dashoffset 1s cubic-bezier(0.57, 0.21, 0.69, 1.25) 0.1s",
+                  "stroke-dashoffset 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25) 0.1s",
                 // Rotate the path
                 transform: "rotate(0turn)",
                 transformOrigin: "center center",
@@ -77,12 +91,12 @@ function Loader({ pageLoaded }) {
             }}
           >
             <div
-              className="text-4xl sm:text-5xl md:text-6xl text-brand font-bold transition-all duration-500"
+              className="text-4xl sm:text-5xl md:text-6xl text-brand font-bold transition-all duration-300"
               style={{
-                transform: `scale(${progress > 90 ? 1 : 0})`,
+                transform: `scale(${progress > 70 ? 1 : 0})`,
                 transitionTimingFunction:
                   "cubic-bezier(0.57, 0.21, 0.69, 1.25)",
-                transitionDelay: "0.5s",
+                transitionDelay: "0s",
               }}
             >
               S
