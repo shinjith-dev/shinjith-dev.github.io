@@ -10,7 +10,7 @@ function Projects() {
   useDarkMode();
 
   return (
-    <div className="w-screen min-h-screen h-full overflow-x-hidden dark:bg-dark-950 transition-all duration-500">
+    <div className="w-screen min-h-screen h-full overflow-x-hidden bg-[#fff] dark:bg-dark-950 transition-all duration-500">
       <div className="container max-w-[1000px] relative mx-auto px-4 sm:px-10 md:px-16 h-full min-h-screen flex flex-col items-center justify-center">
         <div className="w-full pt-20">
           <Link

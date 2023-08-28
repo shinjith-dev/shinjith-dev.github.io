@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import useLoader from "../hooks/useLoader";
-import useDarkMode from "../hooks/useDarkMode";
 
 function Loader({ pageLoaded }) {
   const [progress, setProgress] = useState(0);
   const { loaded, isLoading } = useLoader();
   const [loading, setLoading] = useState(true);
-  useDarkMode();
 
   const min = (a, b) => (a < b ? a : b);
 

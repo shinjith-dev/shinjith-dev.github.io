@@ -7,7 +7,7 @@
 body,
 #root {
   scroll-behavior: smooth;
-  background-color: rgb(28 35 53);
+  font-family: "Rubik", serif;
   width: 100vw !important;
   overflow-x: hidden;
   position: relative;

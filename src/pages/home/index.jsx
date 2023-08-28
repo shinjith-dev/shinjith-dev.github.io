@@ -63,7 +63,7 @@ function Home() {
 
   return (
     <div
-      className="w-screen h-full dark:bg-dark-950 radius-effect"
+      className="w-screen h-full bg-[#fff] dark:bg-dark-950 radius-effect"
       ref={containerRef}
     >
       <div className="container relative mx-auto px-4 sm:px-10 md:px-16 z-10">
