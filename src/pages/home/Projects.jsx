@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Project from "../../components/home/projects/Project";
 import ProjectCard from "../../components/home/projects/ProjectCard";
 import useProjects from "../../components/hooks/useProjects";
@@ -61,9 +62,9 @@ function Projects({ makeActive }) {
         </div>
 
         <div className="text-base md:text-lg text-brand-dark text-center dark:text-dark-500 transition-all">
-          <a href="/projects" className="underline">
+          <Link to="/projects" className="underline">
             view the archive
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -7,10 +7,9 @@
 body,
 #root {
   scroll-behavior: smooth;
-  border-color: #f5f8f7;
+  background-color: rgb(28 35 53);
   width: 100vw !important;
   overflow-x: hidden;
-  font-family: "Rubik", serif;
   position: relative;
   z-index: -3;
 }

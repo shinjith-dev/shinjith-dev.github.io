@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdDarkMode, MdDevices, MdLightMode } from "react-icons/md";
+import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import useDarkMode from "../hooks/useDarkMode";
 
@@ -56,12 +57,12 @@ function Header() {
     >
       <div className="flex items-center justify-between container mx-auto px-4 sm:px-10 md:px-16">
         <div>
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-base sm:text-lg md:text-2xl font-semibold text-brand dark:text-brand-light flex items-baseline font-mono transition-all leading-none"
           >
             /shinjith-dev<span className="blink">_</span>
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center">

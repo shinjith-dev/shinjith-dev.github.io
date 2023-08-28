@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import stringFns from "../../utils/stringFns";
 
 const navs = ["About", "Experience", "Projects", "Services", "Contact"];
@@ -13,8 +14,8 @@ function NavigationItem({ nav, active, activeIndex, index }) {
 
   return (
     <li className="transition-all group my-1" style={{ opacity }}>
-      <a
-        href={`#${path}`}
+      <Link
+        to={`#${path}`}
         onClick={(e) => {
           const hero = document.getElementById(path);
           e.preventDefault(); // Stop Page Reloading
@@ -30,7 +31,7 @@ function NavigationItem({ nav, active, activeIndex, index }) {
         <div className="transition-all duration-300 text-sm text-light-darkest dark:text-dark-200">
           {nav}
         </div>
-      </a>
+      </Link>
     </li>
   );
 }

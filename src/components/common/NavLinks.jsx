@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavLinks() {
   return (
@@ -13,12 +14,12 @@ function NavLinks() {
         Resume
       </a>
       <span className="hidden sm:block">&middot;</span>
-      <a
-        href="/projects"
+      <Link
+        to="/projects"
         className="hover:text-light-darkest dark:hover:text-dark-50 hover:underline transition-all"
       >
         Projects
-      </a>
+      </Link>
       {/* &middot;
       <a
         href="/notes"

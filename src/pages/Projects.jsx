@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
 import useProjects from "../components/hooks/useProjects";
 import ProjectItem from "../components/projects/ProjectItem";
@@ -12,12 +13,12 @@ function Projects() {
     <div className="w-screen min-h-screen h-full overflow-x-hidden dark:bg-dark-950 transition-all duration-500">
       <div className="container max-w-[1000px] relative mx-auto px-4 sm:px-10 md:px-16 h-full min-h-screen flex flex-col items-center justify-center">
         <div className="w-full pt-20">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-sm sm:text-base md:text-xl font-semibold text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-brand flex items-baseline font-mono transition-all leading-none"
           >
             /shinjith-dev<span className="blink">_</span>
-          </a>
+          </Link>
         </div>
 
         <div className="flex-grow w-full py-1">
