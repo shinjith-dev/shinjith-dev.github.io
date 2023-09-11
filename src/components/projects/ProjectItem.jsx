@@ -1,14 +1,22 @@
 import React from "react";
 import { BiArrowBack } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
+import { motion } from "framer-motion";
 
-function ProjectItem({ project, isLast = false }) {
+function ProjectItem({ project, isLast = false, index = 0 }) {
   const date = new Date(project.created_at);
   const dateString = `${String(date.getMonth()).padStart(2, "0")}/${String(
-    date.getFullYear(),
+    date.getFullYear()
   ).slice(2)}`;
+
   return (
-    <tr className="hover:bg-light-lightest dark:hover:bg-dark-900/50">
+    <motion.tr
+      initial={{ opacity: 0, y: 10, x: 100 }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ delay: 0.5 + index * 0.2, type: "tween" }}
+      viewport={{ once: true }}
+      className="hover:bg-light-lightest dark:hover:bg-dark-900/50"
+    >
       <td
         width={20}
         className={`border-light-lighter dark:border-dark-900 py-3 text-light dark:text-dark-500 align-top pr-4 ${
@@ -55,6 +63,7 @@ function ProjectItem({ project, isLast = false }) {
               className="py-1 px-3 font-mono font-semibold rounded-2xl bg-brand-lighter/25 text-brand dark:bg-brand-lightest/25 dark:text-brand-lightest text-xs md:text-sm"
               style={{
                 backdropFilter: "blur(16px) saturate(180%)",
+                webkitBackdropFilter: "blur(16px) saturate(180%)",
               }}
             >
               {tech}
@@ -97,7 +106,7 @@ function ProjectItem({ project, isLast = false }) {
           )
         )}
       </td>
-    </tr>
+    </motion.tr>
   );
 }
 

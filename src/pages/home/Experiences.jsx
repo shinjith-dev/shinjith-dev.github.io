@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Experience from "../../components/home/experiences/Experience";
 import experienceIllus from "../../assets/illus/experiences.svg";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Experiences({ makeActive }) {
   const sectionRef = useRef(null);
@@ -30,11 +31,15 @@ function Experiences({ makeActive }) {
     <section
       id="experience"
       ref={sectionRef}
-      className="w-full min-h-[70vh] flex flex-col items-center justify-start relative pt-40 pb-20"
+      className="w-full min-h-[80vh] flex flex-col items-center justify-start relative pt-40 pb-20"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
         <div className="items-center justify-center hidden md:flex p-8 pl-16 pt-20">
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, type: "tween" }}
+            viewport={{ once: true }}
             src={experienceIllus}
             alt="experience"
             className="w-[60%] max-w-md"
@@ -42,11 +47,19 @@ function Experiences({ makeActive }) {
         </div>
 
         <div>
-          {[...new Array(1)].map((_, index) => (
-            <Experience key={`experience-${index}`} />
-          ))}
+          <AnimatePresence>
+            {[...new Array(1)].map((_, index) => (
+              <Experience key={`experience-${index}`} />
+            ))}
+          </AnimatePresence>
 
-          <div className="text-sm md:text-base text-light-darker hover:text-light-darkest transition-all text-end dark:text-dark-500">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 + 0.1, type: "tween" }}
+            viewport={{ once: true }}
+            className="text-sm md:text-base text-light-darker hover:text-light-darkest text-end dark:text-dark-500"
+          >
             <a
               href="https://res.cloudinary.com/dqts6qgre/image/upload/v1692633804/sdev/resumesdev_s1sz0f.pdf"
               download="resume.pdf"
@@ -56,7 +69,7 @@ function Experiences({ makeActive }) {
             >
               download resume
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
 

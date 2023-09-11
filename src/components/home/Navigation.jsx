@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import stringFns from "../../utils/stringFns";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navs = ["About", "Experience", "Projects", "Services", "Contact"];
 
@@ -13,7 +14,13 @@ function NavigationItem({ nav, active, activeIndex, index }) {
     activeIndex === index ? 1 : 1 - (index + 1 - activeIndex) * opacityFactor;
 
   return (
-    <li className="transition-all group my-1" style={{ opacity }}>
+    <motion.li
+      initial={{ y: -10, x: 40, opacity: 0 }}
+      whileInView={{ y: 0, x: 0, opacity: 1 }}
+      transition={{ delay: 0.4 + index * 0.1, type: "tween" }}
+      className="group my-1"
+      style={{ opacity }}
+    >
       <Link
         to={`#${path}`}
         onClick={(e) => {
@@ -32,7 +39,7 @@ function NavigationItem({ nav, active, activeIndex, index }) {
           {nav}
         </div>
       </Link>
-    </li>
+    </motion.li>
   );
 }
 
@@ -40,6 +47,8 @@ function Navigation({ active }) {
   const [haveBg, setHaveBg] = useState(false);
 
   useEffect(() => {
+    if (window.scrollY > 200) setHaveBg(true);
+
     const checkPosition = () => {
       if (window.scrollY > 200) setHaveBg(true);
       else setHaveBg(false);
@@ -56,15 +65,17 @@ function Navigation({ active }) {
       }`}
     >
       <ul className="transition-all hidden lg:block">
-        {navs.map((nav, index) => (
-          <NavigationItem
-            key={nav}
-            nav={nav}
-            active={active === nav}
-            activeIndex={navs.indexOf(active)}
-            index={index}
-          />
-        ))}
+        <AnimatePresence>
+          {navs.map((nav, index) => (
+            <NavigationItem
+              key={nav}
+              nav={nav}
+              active={active === nav}
+              activeIndex={navs.indexOf(active)}
+              index={index}
+            />
+          ))}
+        </AnimatePresence>
       </ul>
     </nav>
   );

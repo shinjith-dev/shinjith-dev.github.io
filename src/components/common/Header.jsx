@@ -3,12 +3,15 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import useDarkMode from "../hooks/useDarkMode";
+import { motion } from "framer-motion";
 
 function Header() {
   const { change, mode } = useDarkMode();
-  const [haveBg, setHaveBg] = useState(false);
+  const [haveBg, setHaveBg] = useState(window.scrollY > 200);
 
   useEffect(() => {
+    if (window.scrollY > 200) setHaveBg(true);
+
     const checkPosition = () => {
       if (window.scrollY > 200) setHaveBg(true);
       else setHaveBg(false);
@@ -39,17 +42,26 @@ function Header() {
       style={{ backdropFilter: haveBg ? "blur(16px) saturate(180%)" : "none" }}
     >
       <div className="flex items-center justify-between container mx-auto px-4 sm:px-10 md:px-16">
-        <div>
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, type: "tween" }}
+        >
           <Link
             to="/"
             className="text-base sm:text-lg md:text-2xl font-semibold text-brand dark:text-brand-light flex items-baseline font-mono transition-all leading-none"
           >
             /shinjith-dev<span className="blink">_</span>
           </Link>
-        </div>
+        </motion.div>
 
         <div className="flex items-center">
-          <div className="text-xl mx-2 sm:mx-4">
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4, type: "tween" }}
+            className="text-xl mx-2 sm:mx-4"
+          >
             <button
               title={`Switch to ${getNextMode()} mode`}
               onClick={() => change(mode === "light")}
@@ -57,7 +69,7 @@ function Header() {
             >
               {getIcon()}
             </button>
-          </div>
+          </motion.div>
 
           <NavLinks />
         </div>

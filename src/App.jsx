@@ -6,7 +6,7 @@ import Loader from "./components/common/Loader";
 import useDarkMode from "./components/hooks/useDarkMode";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const torch = useRef(null);
 
   useDarkMode();
@@ -37,7 +37,7 @@ function App() {
     );
 
   return (
-    <div className="bg-[#fff] dark:bg-dark-950 relative -z-[3]">
+    <div className="bg-[#fff] dark:bg-dark-950 relative -z-[3] overflow-hidden">
       <div ref={torch} className="torch-effect" />
 
       <Routes>

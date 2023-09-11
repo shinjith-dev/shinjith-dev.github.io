@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { FaRegLightbulb, FaCode } from "react-icons/fa6";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { AiOutlineBug } from "react-icons/ai";
+import { AnimatePresence, motion } from "framer-motion";
 
 const content = [
   {
@@ -30,11 +31,18 @@ const content = [
   },
 ];
 
-function Card({ card }) {
+function Card({ card, index = 0 }) {
   return (
-    <div
-      style={{ backdropFilter: "blur(16px) saturate(180%)" }}
-      className="border shadow-sm border-light/40 dark:border-dark-950/40 rounded-lg p-3 sm:p-5 h-[min(85vw,210px)] pt-8 flex flex-col gap-1 justify-end from-[#95b3ac]/10 dark:from-dark-900/75 to-[#fff]/25 dark:to-dark-900/25 bg-light-lighter/25 dark:bg-dark-900/25 bg-gradient-to-tr transition-all"
+    <motion.div
+      initial={{ opacity: 0, y: 100, x: 10 }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ delay: 0.3 * index * 0.2, type: "tween" }}
+      viewport={{ once: true }}
+      style={{
+        backdropFilter: "blur(16px) saturate(180%)",
+        webkitBackdropFilter: "blur(16px) saturate(180%)",
+      }}  
+      className="border relative z-10 shadow-sm border-light/40 dark:border-dark-950/40 rounded-lg p-3 sm:p-5 h-[min(85vw,210px)] pt-8 flex flex-col gap-1 justify-end from-[#95b3ac]/10 dark:from-dark-900/75 to-[#fff]/25 dark:to-dark-900/25 bg-light-lighter/25 dark:bg-dark-900/25 bg-gradient-to-tr"
     >
       <div className="text-lg sm:text-xl md:text-2xl mb-2 text-light-darkest dark:text-dark-200 transition-all">
         {card.icon}
@@ -46,7 +54,7 @@ function Card({ card }) {
       <div className="text-xs sm:text-sm text-light-darker dark:text-dark-400 transition-all">
         {card.description}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -80,13 +88,21 @@ function Services({ makeActive }) {
       className="w-full min-h-[80vh] flex flex-col justify-center items-center relative md:pt-28"
     >
       <div className="max-w-7xl">
-        <div className="text-2xl md:text-3xl my-2 text-light-darkest font-semibold text-gradient-light dark:text-gradient-dark w-full transition-all">
-          What I do
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, type: "tween" }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl my-2 text-light-darkest font-semibold text-gradient-light dark:text-gradient-dark w-full"
+        >
+          What we do
+        </motion.div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
-          {content.map((card) => (
-            <Card card={card} />
-          ))}
+          <AnimatePresence>
+            {content.map((card, index) => (
+              <Card card={card} key={card.title} index={index} />
+            ))}
+          </AnimatePresence>
         </div>
       </div>
 

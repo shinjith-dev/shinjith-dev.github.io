@@ -1,5 +1,6 @@
 import React from "react";
 import { BiArrowBack } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const techs = [
   "React",
@@ -13,7 +14,13 @@ const techs = [
 
 function Experience() {
   return (
-    <div className="md:p-5 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 10, x: 50 }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ delay: 0.2, type: "tween" }}
+      viewport={{ once: true }}
+      className="md:p-5 relative z-10"
+    >
       <a
         href="https://www.tghtech.com/"
         target="_blank"
@@ -54,6 +61,7 @@ function Experience() {
                 className="py-1 px-3 font-mono font-medium dark:font-normal transition-all rounded-2xl dark:bg-[rgba(28,35,53,0.75)] bg-[rgba(255,255,255,0.25)] border-brand-light dark:border-brand-light border"
                 style={{
                   backdropFilter: "blur(16px) saturate(180%)",
+                  webkitBackdropFilter: "blur(16px) saturate(180%)",
                 }}
               >
                 {tech}
@@ -62,7 +70,7 @@ function Experience() {
           </div>
         </div>
       </a>
-    </div>
+    </motion.div>
   );
 }
 

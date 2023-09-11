@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React from "react";
 import { PiGithubLogoFill, PiLink } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 function ImageLink({ project, children }) {
   if (project?.live_url)
@@ -18,9 +19,13 @@ function ImageLink({ project, children }) {
   return { children };
 }
 
-function Project({ project, left = true }) {
+function Project({ project, left = true, index = 0 }) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 10, x: left ? -100 : 100 }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ delay: 0.3 + index * 0.2, type: "tween" }}
+      viewport={{ once: true }}
       className={`sm:flex items-center relative ${
         left ? "sm:flex-row-reverse" : "sm:flex-row"
       } group`}
@@ -68,6 +73,7 @@ function Project({ project, left = true }) {
               className="py-1 px-3 font-mono font-medium rounded-2xl sm:bg-light/10 transition-all dark:sm:bg-dark-900/10 border border-light-light dark:border-dark-600 dark:sm:border-dark-900 dark:text-dark-300 text-xs md:text-sm"
               style={{
                 backdropFilter: "blur(16px) saturate(180%)",
+                webkitBackdropFilter: "blur(16px) saturate(180%)",
               }}
             >
               {tech}
@@ -102,7 +108,7 @@ function Project({ project, left = true }) {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

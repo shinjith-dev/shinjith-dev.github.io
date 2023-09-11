@@ -1,12 +1,19 @@
 import React from "react";
 import { PiGithubLogoFill, PiLink } from "react-icons/pi";
+import { motion } from "framer-motion";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, index = 0 }) {
   return (
-    <div className="group transition-all duration-300">
+    <motion.div
+      initial={{ opacity: 0, y: 10, x: 50 }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ delay: 0.3 + index * 0.2, type: "tween" }}
+      viewport={{ once: true }}
+      className="group"
+    >
       <div className="overflow-hidden rounded-3xl group-hover:shadow-spread-sm transition-all">
         <a
-          href={project?.live_url ? project.live_url : project?.github_ur}
+          href={project?.live_url ? project.live_url : project?.github_url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -60,7 +67,7 @@ function ProjectCard({ project }) {
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

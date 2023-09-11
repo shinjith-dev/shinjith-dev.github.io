@@ -7,6 +7,7 @@ import {
   PiLinkedinLogo,
   PiTwitterLogo,
 } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 function Contact({ makeActive }) {
   const sectionRef = useRef(null);
@@ -39,62 +40,96 @@ function Contact({ makeActive }) {
     >
       <div className="w-full h-0.5 bg-light-lighter rounded dark:bg-dark-900" />
       <div className="py-40 md:py-52 flex flex-col gap-8 items-center justify-center relative z-10">
-        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-light dark:text-gradient-dark text-center transition-all">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, type: "tween" }}
+          viewport={{ once: true }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-light dark:text-gradient-dark text-center"
+        >
           Tell me about your
           <br />
           next project
-        </div>
+        </motion.div>
 
-        <a
+        <motion.a
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, type: "tween" }}
+          viewport={{ once: true }}
           href="mailto:shinjithkanhangad@gmail.com"
           target="_blank"
           rel="noreferrer"
-          className="text-sm sm:text-base px-5 flex gap-2 items-center py-3 font-medium text-light-lightest bg-light dark:bg-dark-900 dark:text-dark-100 hover:shadow-spread-sm hover:scale-[1.03] hover:bg-light-dark transition-all rounded-xl"
+          className="text-sm sm:text-base px-5 flex gap-2 items-center py-3 font-medium text-light-lightest bg-light dark:bg-dark-900 dark:text-dark-100 hover:shadow-spread-sm hover:scale-[1.03] hover:bg-light-dark rounded-xl"
         >
           Get In Touch <TbMailShare className="text-base sm:text-lg" />
-        </a>
+        </motion.a>
 
         <div className="flex sm:hidden gap-5 text-xl md:text-2xl text-light-darker dark:text-dark-700 transition-all">
-          <a
+          <motion.a
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, type: "tween" }}
+            viewport={{ once: true }}
             href="https://github.com/shinjith-dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-light-darkest dark:hover:text-dark-300 transition-all"
+            className="hover:text-light-darkest dark:hover:text-dark-300"
           >
             <PiGithubLogo />
-          </a>
-          <a
+          </motion.a>
+
+          <motion.a
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, type: "tween" }}
+            viewport={{ once: true }}
             href="https://www.instagram.com/shinjith_"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-light-darkest dark:hover:text-dark-300 transition-all"
+            className="hover:text-light-darkest dark:hover:text-dark-300"
           >
             <PiInstagramLogo />
-          </a>
-          <a
+          </motion.a>
+
+          <motion.a
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, type: "tween" }}
+            viewport={{ once: true }}
             href="https://dev.to/shinjithdev"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-light-darkest dark:hover:text-dark-300 transition-all"
+            className="hover:text-light-darkest dark:hover:text-dark-300"
           >
             <PiDevToLogo />
-          </a>
-          <a
+          </motion.a>
+
+          <motion.a
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, type: "tween" }}
+            viewport={{ once: true }}
             href="https://www.linkedin.com/in/shinjithkanhangad"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-light-darkest dark:hover:text-dark-300 transition-all"
+            className="hover:text-light-darkest dark:hover:text-dark-300"
           >
             <PiLinkedinLogo />
-          </a>
-          <a
+          </motion.a>
+
+          <motion.a
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3, type: "tween" }}
+            viewport={{ once: true }}
             href="https://twitter.com/ShinjithR"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-light-darkest dark:hover:text-dark-300 transition-all"
+            className="hover:text-light-darkest dark:hover:text-dark-300"
           >
             <PiTwitterLogo />
-          </a>
+          </motion.a>
         </div>
       </div>
       <div className="w-full h-0.5 bg-light-lighter dark:bg-dark-900 rounded transition-all" />

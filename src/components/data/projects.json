@@ -1,105 +1,6 @@
 {
   "projects": [
     {
-      "_id": "64e22b46a213109ddbc551b7",
-      "slug": "js-calculator",
-      "name": "JS Calculator",
-      "description": [
-        "A calculator with a real calculator appearance! Under the hood, it is a basic algorithm powered by vanilla javascript."
-      ],
-      "technologies": ["JavaScript", "HTML", "CSS"],
-      "live_url": "https://shinjith-dev.github.io/JS-Calculator",
-      "github_url": "https://github.com/shinjith-dev/JS-Calculator",
-      "featured": false,
-      "created_at": "2022-08-01T18:30:00.000Z",
-      "__v": { "$numberInt": "0" },
-      "highlight": true,
-      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692543439/sdev/Screenshot_from_2023-08-20_20-23-11_xxh6y4.png"
-    },
-    {
-      "_id": "64e240abc14fe0f58000c265",
-      "slug": "javascript-projects",
-      "name": "Javascript Projects",
-      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549267/sdev/Screenshot_from_2023-08-20_22-03-17_djxcrt.png",
-      "description": [
-        "A collection of small projects for learning javascript functions and approaches."
-      ],
-      "technologies": ["JavaScript", "HTML", "CSS", "MDB-Kit"],
-      "live_url": "https://shinjith-dev.github.io/basic-javscript-projects/",
-      "github_url": "https://github.com/shinjith-dev/basic-javscript-projects",
-      "featured": false,
-      "highlight": false,
-      "created_at": "2022-09-08T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": { "$oid": "64e242f8cf7f89cea837af96" },
-      "slug": "drum-kit",
-      "name": "Drum Kit",
-      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549613/sdev/Screenshot_from_2023-08-20_22-08-25_pwykf5.png",
-      "description": [
-        "A basic and easy-to-create yet entertaining website that simulates a drum kit.",
-        "Created with vanilla js and some audio clips powered with keybindings"
-      ],
-      "technologies": ["HTML", "CSS", "MDB Kit", "JavaScript"],
-      "live_url": "https://shinjith-dev.github.io/JavaScript-Drum-Kit",
-      "github_url": "https://github.com/shinjith-dev/JavaScript-Drum-Kit",
-      "featured": false,
-      "highlight": true,
-      "created_at": "2022-09-16T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": "64e2454ccf7f89cea837af9e",
-      "slug": "react-todo",
-      "name": "React Todo",
-      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691605579/sdev/Screenshot_tvqwe5.png",
-      "description": [
-        "Simple React Todo app with a simple design. It can obviously add, list, checkmark, and delete your tasks, but it does so in a simple manner."
-      ],
-      "technologies": ["React", "CSS"],
-      "live_url": "https://shinjith-dev.github.io/React-Todo",
-      "github_url": "https://github.com/shinjith-dev/React-Todo",
-      "featured": false,
-      "highlight": true,
-      "created_at": "2022-03-09T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": "64e247f5b0ee66a9d9b2b869",
-      "slug": "movie-loft",
-      "name": "Movie Loft",
-      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691604140/sdev/Screenshot_from_2023-08-09_22-53-17_kmeiss.png",
-      "description": [
-        "Movie Loft is a simple to use web-based movie database client. It could be useful when looking for movies and television shows. It also contains detailed information on a film or television show, such as the cast and crew, number of episodes, and so on.",
-        "Notably, it was a beginner-friendly project for learning open APIs and api integeration."
-      ],
-      "technologies": ["React", "MaterialUI", "TMDB API"],
-      "live_url": "https://movie-loft.netlify.app",
-      "github_url": "https://github.com/shinjith-dev/movie-loft",
-      "featured": true,
-      "highlight": false,
-      "created_at": "2022-10-21T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": "64e24b46b0ee66a9d9b2b870",
-      "slug": "personal-website-v2",
-      "name": "Personal Website v2",
-      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692551473/sdev/Screenshot_from_2023-08-20_22-40-26_n2d7mg.png",
-      "description": [
-        "A portfolio website. It offers a visually appealing fancy UI with an awesome loading animation!",
-        "The majority of the scripts are written in vanilla js, with styling done mostly in CSS. Another appealing feature of this website is the page transition effect."
-      ],
-      "technologies": ["React", "Bootstrap", "Sass"],
-      "live_url": "https://shinjith-dev.github.io/shinjith.live-v2",
-      "github_url": "https://github.com/shinjith-dev/shinjith.live-v2",
-      "featured": true,
-      "highlight": false,
-      "created_at": "2022-11-25T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
-    },
-    {
       "_id": "64e24e97b0ee66a9d9b2b874",
       "slug": "bisyam",
       "name": "Bisyam",
@@ -122,6 +23,105 @@
       "highlight": false,
       "created_at": "2023-08-19T18:30:00.000Z",
       "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e24b46b0ee66a9d9b2b870",
+      "slug": "personal-website-v2",
+      "name": "Personal Website v2",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692551473/sdev/Screenshot_from_2023-08-20_22-40-26_n2d7mg.png",
+      "description": [
+        "A portfolio website. It offers a visually appealing fancy UI with an awesome loading animation!",
+        "The majority of the scripts are written in vanilla js, with styling done mostly in CSS. Another appealing feature of this website is the page transition effect."
+      ],
+      "technologies": ["React", "Bootstrap", "Sass"],
+      "live_url": "https://shinjith-dev.github.io/shinjith.live-v2",
+      "github_url": "https://github.com/shinjith-dev/shinjith.live-v2",
+      "featured": true,
+      "highlight": false,
+      "created_at": "2022-11-25T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e247f5b0ee66a9d9b2b869",
+      "slug": "movie-loft",
+      "name": "Movie Loft",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691604140/sdev/Screenshot_from_2023-08-09_22-53-17_kmeiss.png",
+      "description": [
+        "Movie Loft is a simple to use web-based movie database client. It could be useful when looking for movies and television shows. It also contains detailed information on a film or television show, such as the cast and crew, number of episodes, and so on.",
+        "Notably, it was a beginner-friendly project for learning open APIs and api integeration."
+      ],
+      "technologies": ["React", "MaterialUI", "TMDB API"],
+      "live_url": "https://movie-loft.netlify.app",
+      "github_url": "https://github.com/shinjith-dev/movie-loft",
+      "featured": true,
+      "highlight": false,
+      "created_at": "2022-10-21T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e2454ccf7f89cea837af9e",
+      "slug": "react-todo",
+      "name": "React Todo",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691605579/sdev/Screenshot_tvqwe5.png",
+      "description": [
+        "Simple React Todo app with a simple design. It can obviously add, list, checkmark, and delete your tasks, but it does so in a simple manner."
+      ],
+      "technologies": ["React", "CSS"],
+      "live_url": "https://shinjith-dev.github.io/React-Todo",
+      "github_url": "https://github.com/shinjith-dev/React-Todo",
+      "featured": false,
+      "highlight": true,
+      "created_at": "2022-03-09T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "64e242f8cf7f89cea837af96" },
+      "slug": "drum-kit",
+      "name": "Drum Kit",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549613/sdev/Screenshot_from_2023-08-20_22-08-25_pwykf5.png",
+      "description": [
+        "A basic and easy-to-create yet entertaining website that simulates a drum kit.",
+        "Created with vanilla js and some audio clips powered with keybindings"
+      ],
+      "technologies": ["HTML", "CSS", "MDB Kit", "JavaScript"],
+      "live_url": "https://shinjith-dev.github.io/JavaScript-Drum-Kit",
+      "github_url": "https://github.com/shinjith-dev/JavaScript-Drum-Kit",
+      "featured": false,
+      "highlight": true,
+      "created_at": "2022-09-16T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e240abc14fe0f58000c265",
+      "slug": "javascript-projects",
+      "name": "Javascript Projects",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549267/sdev/Screenshot_from_2023-08-20_22-03-17_djxcrt.png",
+      "description": [
+        "A collection of small projects for learning javascript functions and approaches."
+      ],
+      "technologies": ["JavaScript", "HTML", "CSS", "MDB-Kit"],
+      "live_url": "https://shinjith-dev.github.io/basic-javscript-projects/",
+      "github_url": "https://github.com/shinjith-dev/basic-javscript-projects",
+      "featured": false,
+      "highlight": false,
+      "created_at": "2022-09-08T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e22b46a213109ddbc551b7",
+      "slug": "js-calculator",
+      "name": "JS Calculator",
+      "description": [
+        "A calculator with a real calculator appearance! Under the hood, it is a basic algorithm powered by vanilla javascript."
+      ],
+      "technologies": ["JavaScript", "HTML", "CSS"],
+      "live_url": "https://shinjith-dev.github.io/JS-Calculator",
+      "github_url": "https://github.com/shinjith-dev/JS-Calculator",
+      "featured": false,
+      "created_at": "2022-08-01T18:30:00.000Z",
+      "__v": { "$numberInt": "0" },
+      "highlight": true,
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692543439/sdev/Screenshot_from_2023-08-20_20-23-11_xxh6y4.png"
     }
   ]
 }
