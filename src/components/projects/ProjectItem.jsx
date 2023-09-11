@@ -13,7 +13,7 @@ function ProjectItem({ project, isLast = false, index = 0 }) {
     <motion.tr
       initial={{ opacity: 0, y: 10, x: 100 }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      transition={{ delay: 0.5 + index * 0.2, type: "tween" }}
+      transition={{ delay: 0.5 + index * 0.1, type: "tween" }}
       viewport={{ once: true }}
       className="hover:bg-light-lightest dark:hover:bg-dark-900/50"
     >
