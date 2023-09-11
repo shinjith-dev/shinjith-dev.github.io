@@ -6,7 +6,7 @@ import Loader from "./components/common/Loader";
 import useDarkMode from "./components/hooks/useDarkMode";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const torch = useRef(null);
 
   useDarkMode();
