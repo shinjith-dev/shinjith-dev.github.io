@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 
 const useDarkMode = () => {
-  const [mode, setMode] = useState("system-dark");
+  const [mode, setMode] = useState("dark");
 
   const setSystem = () => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       document.documentElement.classList.add("dark");
-      setMode("system-dark");
+      setMode("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      setMode("system-light");
+      setMode("light");
+      localStorage.setItem("theme", "light");
     }
-    localStorage.setItem("theme", "system");
   };
 
   const setDark = () => {
@@ -33,15 +34,11 @@ const useDarkMode = () => {
   }, []);
 
   const change = (isDark) => {
-    if (isDark === "system") setSystem();
-    else if (isDark === "light") setLight();
-    else setDark();
+    if (isDark) setDark();
+    else setLight();
   };
 
-  const colorMode = mode.includes("system") ? mode.split("-")[1] : mode;
-  const type = mode.includes("system") ? "system" : "manual";
-
-  return { mode: colorMode, type, change };
+  return { mode, change };
 };
 
 export default useDarkMode;

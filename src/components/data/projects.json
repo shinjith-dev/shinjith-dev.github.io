@@ -5,7 +5,7 @@
       "slug": "js-calculator",
       "name": "JS Calculator",
       "description": [
-        "One of my earliest javascript projects; I tried to keep it as real as possible, rarely copying logic from the internet; it was a fun way to learn javascript."
+        "A calculator with a real calculator appearance! Under the hood, it is a basic algorithm powered by vanilla javascript."
       ],
       "technologies": ["JavaScript", "HTML", "CSS"],
       "live_url": "https://shinjith-dev.github.io/JS-Calculator",
@@ -22,7 +22,7 @@
       "name": "Javascript Projects",
       "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549267/sdev/Screenshot_from_2023-08-20_22-03-17_djxcrt.png",
       "description": [
-        "A collection of small projects for learning javascript functions and approaches. Best suited for javascript beginners."
+        "A collection of small projects for learning javascript functions and approaches."
       ],
       "technologies": ["JavaScript", "HTML", "CSS", "MDB-Kit"],
       "live_url": "https://shinjith-dev.github.io/basic-javscript-projects/",
@@ -38,8 +38,8 @@
       "name": "Drum Kit",
       "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549613/sdev/Screenshot_from_2023-08-20_22-08-25_pwykf5.png",
       "description": [
-        "Interactive drum kit simulation; a simple and easy-to-create yet fun project to work on.",
-        "One of my fave vanilla js projects as a beginner."
+        "A basic and easy-to-create yet entertaining website that simulates a drum kit.",
+        "Created with vanilla js and some audio clips powered with keybindings"
       ],
       "technologies": ["HTML", "CSS", "MDB Kit", "JavaScript"],
       "live_url": "https://shinjith-dev.github.io/JavaScript-Drum-Kit",
@@ -55,7 +55,7 @@
       "name": "React Todo",
       "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691605579/sdev/Screenshot_tvqwe5.png",
       "description": [
-        "Simple React Todo app with a simple design. It can obviously add, list, checkmark, and delete your tasks, but it does so in a simple manner.This is my first React project."
+        "Simple React Todo app with a simple design. It can obviously add, list, checkmark, and delete your tasks, but it does so in a simple manner."
       ],
       "technologies": ["React", "CSS"],
       "live_url": "https://shinjith-dev.github.io/React-Todo",
@@ -88,8 +88,8 @@
       "name": "Personal Website v2",
       "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692551473/sdev/Screenshot_from_2023-08-20_22-40-26_n2d7mg.png",
       "description": [
-        "This portfolio website was an intriguing project I created; it may appear a little fancy now, but it was a great learning opportunity to learn react in depth.",
-        "I had to put in some work to build bespoke animations, and changing states was a bit difficult. It was the beginning of my experience with the react library."
+        "A portfolio website. It offers a visually appealing fancy UI with an awesome loading animation!",
+        "The majority of the scripts are written in vanilla js, with styling done mostly in CSS. Another appealing feature of this website is the page transition effect."
       ],
       "technologies": ["React", "Bootstrap", "Sass"],
       "live_url": "https://shinjith-dev.github.io/shinjith.live-v2",

@@ -16,10 +16,23 @@ body,
 
 /* cursor blink animation */
 .blink {
-  animation-name: blink;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  animation-duration: 1s;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+          animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes blink {
@@ -33,6 +46,25 @@ body,
 
 /* text gradient  */
 .text-gradient-brand {
+  background: -webkit-gradient(
+      linear,
+      left top, right top,
+      from(#b73b1e),
+      color-stop(20%, #ee6c4d),
+      color-stop(40%, #fbb6a6),
+      color-stop(60%, #ee6c4d),
+      to(#b73b1e)
+    )
+    0 0 / 100% 100%;
+  background: -o-linear-gradient(
+      left,
+      #b73b1e 0%,
+      #ee6c4d 20%,
+      #fbb6a6 40%,
+      #ee6c4d 60%,
+      #b73b1e 100%
+    )
+    0 0 / 100% 100%;
   background: linear-gradient(
       to right,
       #b73b1e 0%,
@@ -50,6 +82,25 @@ body,
 }
 
 .text-gradient-light {
+  background: -webkit-gradient(
+      linear,
+      left top, right top,
+      from(#2a3735),
+      color-stop(20%, #374e4b),
+      color-stop(80%, #678983),
+      color-stop(90%, #374e4b),
+      to(#2a3735)
+    )
+    0 0 / 100% 100%;
+  background: -o-linear-gradient(
+      left,
+      #2a3735 0%,
+      #374e4b 20%,
+      #678983 80%,
+      #374e4b 90%,
+      #2a3735 100%
+    )
+    0 0 / 100% 100%;
   background: linear-gradient(
       to right,
       #2a3735 0%,
@@ -67,6 +118,25 @@ body,
 }
 
 .dark .text-gradient-light {
+  background: -webkit-gradient(
+      linear,
+      left top, right top,
+      from(#606472),
+      color-stop(20%, #797c88),
+      color-stop(80%, #92959f),
+      color-stop(90%, #797c88),
+      to(#606472)
+    )
+    0 0 / 100% 100%;
+  background: -o-linear-gradient(
+      left,
+      #606472 0%,
+      #797c88 20%,
+      #92959f 80%,
+      #797c88 90%,
+      #606472 100%
+    )
+    0 0 / 100% 100%;
   background: linear-gradient(
       to right,
       #606472 0%,
@@ -84,8 +154,16 @@ body,
 }
 
 .gradient-animation {
-  animation: shine 1s linear infinite;
-  animation-direction: alternate;
+  -webkit-animation: shine 1s linear infinite;
+          animation: shine 1s linear infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position: 100% center;
+  }
 }
 
 @keyframes shine {
@@ -96,12 +174,14 @@ body,
 
 /* experience card  */
 .experience-card {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .experience-card:hover {
-  transform: translate3d(0px, 0px, 5px);
-  /* backdrop-filter: blur(16px) saturate(180%); */
+  -webkit-transform: translate3d(0px, 0px, 5px);
+          transform: translate3d(0px, 0px, 5px);
 }
 
 /* radius effect */
@@ -111,11 +191,19 @@ body,
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
+    -webkit-transition: all 0.05s ease-out;
+    -o-transition: all 0.05s ease-out;
     transition: all 0.05s ease-out;
     opacity: 0.5;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 1;
-    /* background: rgb(66, 95, 91); */
+    background: -o-radial-gradient(
+      circle,
+      rgba(149, 179, 172, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
     background: radial-gradient(
       circle,
       rgba(149, 179, 172, 0.25) 0%,
@@ -129,10 +217,18 @@ body,
     height: 50vw;
     border-radius: 50%;
     opacity: 1;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: all 0.05s ease-out;
+    -o-transition: all 0.05s ease-out;
     transition: all 0.05s ease-out;
     z-index: 1;
-    /* background: rgb(66, 95, 91); */
+    background: -o-radial-gradient(
+      circle,
+      rgba(50, 55, 73, 0.75) 0%,
+      rgba(50, 55, 73, 0) 70%
+    );
     background: radial-gradient(
       circle,
       rgba(50, 55, 73, 0.75) 0%,

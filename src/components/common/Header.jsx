@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { MdDarkMode, MdDevices, MdLightMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import useDarkMode from "../hooks/useDarkMode";
 
 function Header() {
-  const { change, mode, type } = useDarkMode();
+  const { change, mode } = useDarkMode();
   const [haveBg, setHaveBg] = useState(false);
 
   useEffect(() => {
@@ -18,32 +18,15 @@ function Header() {
     return () => window.removeEventListener("scroll", checkPosition);
   }, []);
 
-  const toggleModes = () => {
-    if (type === "system") {
-      if (mode === "dark") change("light");
-      else change("dark");
-    } else if (mode === "light") change("dark");
-    else change("system");
-  };
-
   const getIcon = () => {
-    if (type === "system")
-      return (
-        <MdLightMode
-          className={`text-base sm:text-lg ${
-            mode === "dark" ? "text-dark-200" : "text-light-darkest"
-          }`}
-        />
-      );
     if (mode === "light")
       return <MdDarkMode className="text-base sm:text-lg text-light-darkest" />;
-    return <MdDevices className="text-base sm:text-lg text-dark-200" />;
+    return <MdLightMode className={`text-base sm:text-lg text-dark-200`} />;
   };
 
   const getNextMode = () => {
-    if (type === "system") return "light";
     if (mode === "light") return "dark";
-    return "system";
+    return "light";
   };
 
   return (
@@ -69,7 +52,7 @@ function Header() {
           <div className="text-xl mx-2 sm:mx-4">
             <button
               title={`Switch to ${getNextMode()} mode`}
-              onClick={toggleModes}
+              onClick={() => change(mode === "light")}
               className="rounded-full p-1 sm:p-2 group transition-all hover:shadow-spread-xs"
             >
               {getIcon()}
