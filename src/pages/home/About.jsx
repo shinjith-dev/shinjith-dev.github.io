@@ -28,7 +28,7 @@ function About({ makeActive }) {
     <section
       id="about"
       ref={sectionRef}
-      className="w-full min-h-screen flex items-center"
+      className="w-full min-h-[70vh] flex items-center"
     >
       <div className="flex flex-col lg:flex-row gap-4 md:gap-6 justify-between -mt-40 md:mt-0">
         <img

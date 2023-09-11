@@ -77,7 +77,7 @@ function Services({ makeActive }) {
     <section
       id="services"
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col justify-center items-center relative py-5"
+      className="w-full min-h-[80vh] flex flex-col justify-center items-center relative md:pt-28"
     >
       <div className="max-w-7xl">
         <div className="text-2xl md:text-3xl my-2 text-light-darkest font-semibold text-gradient-light dark:text-gradient-dark w-full transition-all">
@@ -90,7 +90,7 @@ function Services({ makeActive }) {
         </div>
       </div>
 
-      <div className="text-6xl sm:text-7xl md:text-9xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute left-0 top-[calc(100vh-150px)] z-0 transition-all">
+      <div className="text-6xl sm:text-7xl md:text-9xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute left-0 top-[85%] z-0 transition-all">
         SERVICES
       </div>
     </section>

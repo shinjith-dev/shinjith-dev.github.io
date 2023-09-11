@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
-import useProjects from "../components/hooks/useProjects";
+import { projects } from "../components/data/projects.json";
 import ProjectItem from "../components/projects/ProjectItem";
 import useDarkMode from "../components/hooks/useDarkMode";
 
 function Projects() {
-  const { projects } = useProjects();
   useDarkMode();
+
+  const sort = (a, b) => new Date(a.created_at) < new Date(b.created_at);
 
   return (
     <div className="w-screen min-h-screen h-full overflow-x-hidden bg-[#fff] dark:bg-dark-950 transition-all duration-500">
-      <div className="container max-w-[1000px] relative mx-auto px-4 sm:px-10 md:px-16 h-full min-h-screen flex flex-col items-center justify-center">
+      <div className="container max-w-[1000px] relative mx-auto px-4 sm:px-10 md:px-16 h-full min-h-screen flex flex-col items-center justify-center z-10">
         <div className="w-full pt-20">
           <Link
             to="/"
@@ -39,12 +40,14 @@ function Projects() {
             </thead>
             <tbody className="text-left text-sm sm:text-base text-light-darkest dark:text-dark-200">
               {projects &&
-                projects.map((project, index) => (
-                  <ProjectItem
-                    project={project}
-                    isLast={index === projects.length - 1}
-                  />
-                ))}
+                projects
+                  .sort(sort)
+                  .map((project, index) => (
+                    <ProjectItem
+                      project={project}
+                      isLast={index === projects.length - 1}
+                    />
+                  ))}
             </tbody>
           </table>
         </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function NavLinks() {
   return (
-    <div className="flex text-light-dark dark:text-dark-200 gap-1 sm:gap-1.5 md:gap-2 leading-none transition-all">
+    <div className="flex text-light-dark dark:text-dark-300 gap-1 sm:gap-1.5 md:gap-2 leading-none transition-all">
       <a
         href="https://res.cloudinary.com/dqts6qgre/image/upload/v1692633804/sdev/resumesdev_s1sz0f.pdf"
         download="resume.pdf"

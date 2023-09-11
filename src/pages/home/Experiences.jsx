@@ -30,9 +30,9 @@ function Experiences({ makeActive }) {
     <section
       id="experience"
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col items-center justify-center relative py-0 sm:py-3 md:py-5"
+      className="w-full min-h-[70vh] flex flex-col items-center justify-start relative pt-40 pb-20"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
         <div className="items-center justify-center hidden md:flex p-8 pl-16 pt-20">
           <img
             src={experienceIllus}
@@ -60,7 +60,7 @@ function Experiences({ makeActive }) {
         </div>
       </div>
 
-      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute left-0 top-[calc(100vh-150px)] z-0 transition-all">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute left-0 top-[70px] z-0 transition-all">
         EXPERIENCE
       </div>
     </section>

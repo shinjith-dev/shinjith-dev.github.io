@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import useLoader from "../hooks/useLoader";
 
 function Loader({ pageLoaded }) {
   const [progress, setProgress] = useState(0);
-  const { loaded, isLoading } = useLoader();
   const [loading, setLoading] = useState(true);
 
   const min = (a, b) => (a < b ? a : b);
 
   useEffect(() => {
-    if (loaded && progress > 120 && loading) {
+    if (progress > 120 && loading) {
       setLoading(false);
       setTimeout(() => {
         pageLoaded();
       }, 800);
     }
-  }, [loaded, progress]);
+  }, [progress]);
 
   useEffect(() => {
     let intervalId = null;
@@ -28,7 +26,7 @@ function Loader({ pageLoaded }) {
     }
 
     return () => clearInterval(intervalId);
-  }, [isLoading]);
+  }, []);
 
   return (
     <div

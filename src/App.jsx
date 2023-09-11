@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Projects from "./pages/Projects";
@@ -7,7 +7,27 @@ import useDarkMode from "./components/hooks/useDarkMode";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const torch = useRef(null);
+
   useDarkMode();
+
+  function mouseListener(e) {
+    if (torch.current) {
+      const circle = torch.current;
+      const left = e.pageX;
+      const top = e.pageY;
+      circle.style.left = left + "px";
+      circle.style.top = top + "px";
+    }
+  }
+
+  React.useEffect(() => {
+    document.addEventListener("mousemove", mouseListener);
+
+    return () => {
+      document.removeEventListener("mousemove", mouseListener);
+    };
+  }, []);
 
   if (loading)
     return (
@@ -18,6 +38,8 @@ function App() {
 
   return (
     <div className="bg-[#fff] dark:bg-dark-950 relative -z-[3]">
+      <div ref={torch} className="torch-effect" />
+
       <Routes>
         <Route index element={<Home />} />
         <Route path="/projects" element={<Projects />} />

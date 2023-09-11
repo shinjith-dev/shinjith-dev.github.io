@@ -1,0 +1,127 @@
+{
+  "projects": [
+    {
+      "_id": "64e22b46a213109ddbc551b7",
+      "slug": "js-calculator",
+      "name": "JS Calculator",
+      "description": [
+        "One of my earliest javascript projects; I tried to keep it as real as possible, rarely copying logic from the internet; it was a fun way to learn javascript."
+      ],
+      "technologies": ["JavaScript", "HTML", "CSS"],
+      "live_url": "https://shinjith-dev.github.io/JS-Calculator",
+      "github_url": "https://github.com/shinjith-dev/JS-Calculator",
+      "featured": false,
+      "created_at": "2022-08-01T18:30:00.000Z",
+      "__v": { "$numberInt": "0" },
+      "highlight": true,
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692543439/sdev/Screenshot_from_2023-08-20_20-23-11_xxh6y4.png"
+    },
+    {
+      "_id": "64e240abc14fe0f58000c265",
+      "slug": "javascript-projects",
+      "name": "Javascript Projects",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549267/sdev/Screenshot_from_2023-08-20_22-03-17_djxcrt.png",
+      "description": [
+        "A collection of small projects for learning javascript functions and approaches. Best suited for javascript beginners."
+      ],
+      "technologies": ["JavaScript", "HTML", "CSS", "MDB-Kit"],
+      "live_url": "https://shinjith-dev.github.io/basic-javscript-projects/",
+      "github_url": "https://github.com/shinjith-dev/basic-javscript-projects",
+      "featured": false,
+      "highlight": false,
+      "created_at": "2022-09-08T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "64e242f8cf7f89cea837af96" },
+      "slug": "drum-kit",
+      "name": "Drum Kit",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692549613/sdev/Screenshot_from_2023-08-20_22-08-25_pwykf5.png",
+      "description": [
+        "Interactive drum kit simulation; a simple and easy-to-create yet fun project to work on.",
+        "One of my fave vanilla js projects as a beginner."
+      ],
+      "technologies": ["HTML", "CSS", "MDB Kit", "JavaScript"],
+      "live_url": "https://shinjith-dev.github.io/JavaScript-Drum-Kit",
+      "github_url": "https://github.com/shinjith-dev/JavaScript-Drum-Kit",
+      "featured": false,
+      "highlight": true,
+      "created_at": "2022-09-16T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e2454ccf7f89cea837af9e",
+      "slug": "react-todo",
+      "name": "React Todo",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691605579/sdev/Screenshot_tvqwe5.png",
+      "description": [
+        "Simple React Todo app with a simple design. It can obviously add, list, checkmark, and delete your tasks, but it does so in a simple manner.This is my first React project."
+      ],
+      "technologies": ["React", "CSS"],
+      "live_url": "https://shinjith-dev.github.io/React-Todo",
+      "github_url": "https://github.com/shinjith-dev/React-Todo",
+      "featured": false,
+      "highlight": true,
+      "created_at": "2022-03-09T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e247f5b0ee66a9d9b2b869",
+      "slug": "movie-loft",
+      "name": "Movie Loft",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1691604140/sdev/Screenshot_from_2023-08-09_22-53-17_kmeiss.png",
+      "description": [
+        "Movie Loft is a simple to use web-based movie database client. It could be useful when looking for movies and television shows. It also contains detailed information on a film or television show, such as the cast and crew, number of episodes, and so on.",
+        "Notably, it was a beginner-friendly project for learning open APIs and api integeration."
+      ],
+      "technologies": ["React", "MaterialUI", "TMDB API"],
+      "live_url": "https://movie-loft.netlify.app",
+      "github_url": "https://github.com/shinjith-dev/movie-loft",
+      "featured": true,
+      "highlight": false,
+      "created_at": "2022-10-21T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e24b46b0ee66a9d9b2b870",
+      "slug": "personal-website-v2",
+      "name": "Personal Website v2",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692551473/sdev/Screenshot_from_2023-08-20_22-40-26_n2d7mg.png",
+      "description": [
+        "This portfolio website was an intriguing project I created; it may appear a little fancy now, but it was a great learning opportunity to learn react in depth.",
+        "I had to put in some work to build bespoke animations, and changing states was a bit difficult. It was the beginning of my experience with the react library."
+      ],
+      "technologies": ["React", "Bootstrap", "Sass"],
+      "live_url": "https://shinjith-dev.github.io/shinjith.live-v2",
+      "github_url": "https://github.com/shinjith-dev/shinjith.live-v2",
+      "featured": true,
+      "highlight": false,
+      "created_at": "2022-11-25T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": "64e24e97b0ee66a9d9b2b874",
+      "slug": "bisyam",
+      "name": "Bisyam",
+      "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692552418/sdev/Screenshot_from_2023-08-20_22-56-05_qgxghq.png",
+      "description": [
+        "One of the best projects I've worked on to date, it was an incredible learning experience. It is a platform that allows you to communicate with your loved ones while providing a smooth user experience.",
+        "It was a massive project to manage, thanks in part to the personnel behind it.",
+        "This is still being worked on."
+      ],
+      "technologies": [
+        "React",
+        "MaterialUI",
+        "Typescript",
+        "NodeJs",
+        "Express"
+      ],
+      "live_url": "https://bisyam.netlify.app",
+      "github_url": "https://github.com/shinjith-dev/bisyam-frotend",
+      "featured": true,
+      "highlight": false,
+      "created_at": "2023-08-19T18:30:00.000Z",
+      "__v": { "$numberInt": "0" }
+    }
+  ]
+}

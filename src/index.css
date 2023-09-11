@@ -106,23 +106,15 @@ body,
 
 /* radius effect */
 @media (hover: hover) {
-  .radius-effect {
-    position: relative;
-    background-color: #fff;
-    z-index: -2;
-    overflow: hidden;
-  }
-
-  .radius-effect::before {
-    content: "";
+  .torch-effect {
     position: absolute;
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
-    top: calc(var(--y, 0) * 1px - 25vw);
-    left: calc(var(--x, 0) * 1px - 25vw);
-    transition: all 0.1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-    z-index: -1;
+    transition: all 0.05s ease-out;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     /* background: rgb(66, 95, 91); */
     background: radial-gradient(
       circle,
@@ -131,16 +123,15 @@ body,
     );
   }
 
-  .dark .radius-effect::before {
-    content: "";
+  .dark .torch-effect {
     position: absolute;
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
-    top: calc(var(--y, 0) * 1px - 25vw);
-    left: calc(var(--x, 0) * 1px - 25vw);
-    transition: all 0.1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-    z-index: -1;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: all 0.05s ease-out;
+    z-index: 1;
     /* background: rgb(66, 95, 91); */
     background: radial-gradient(
       circle,

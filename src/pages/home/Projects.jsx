@@ -2,10 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Project from "../../components/home/projects/Project";
 import ProjectCard from "../../components/home/projects/ProjectCard";
-import useProjects from "../../components/hooks/useProjects";
+import { projects } from "../../components/data/projects.json";
 
 function Projects({ makeActive }) {
-  const { projects } = useProjects();
   const sectionRef = useRef(null);
   const thisSection = "Projects";
 
@@ -28,6 +27,8 @@ function Projects({ makeActive }) {
     };
   }, [sectionRef.current]);
 
+  const sort = (a, b) => new Date(a.created_at) < new Date(b.created_at);
+
   return (
     <section
       id="projects"
@@ -39,6 +40,7 @@ function Projects({ makeActive }) {
           {projects &&
             projects
               .filter((project) => project.featured)
+              .sort(sort)
               .map((project, index) => (
                 <Project
                   left={index % 2 === 0}
@@ -52,10 +54,11 @@ function Projects({ makeActive }) {
           Other Noteworthy Projects
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full h-full gap-x-6 md:gap-x-8 mt-6 mb-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full h-full gap-6 md:gap-8 mt-4 mb-1">
           {projects &&
             projects
               .filter((project) => project.highlight)
+              .sort(sort)
               .map((project) => (
                 <ProjectCard project={project} key={project.id} />
               ))}
@@ -68,7 +71,7 @@ function Projects({ makeActive }) {
         </div>
       </div>
 
-      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute right-0 top-[50px] z-0 transition-all">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-bold text-center tracking-widest text-light/10 dark:text-dark-900 absolute right-0 top-[70px] z-0 transition-all">
         PROJECTS
       </div>
     </section>
