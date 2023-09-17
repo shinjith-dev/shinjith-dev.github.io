@@ -9,7 +9,7 @@ function NavLinks() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.6, type: "tween" }}
-        href="https://res.cloudinary.com/dqts6qgre/image/upload/v1692633804/sdev/resumesdev_s1sz0f.pdf"
+        href="https://res.cloudinary.com/dqts6qgre/image/upload/v1694947458/sdev/resume_sdev_awlrfb.pdf"
         download="resume.pdf"
         target="_blank"
         rel="noreferrer"

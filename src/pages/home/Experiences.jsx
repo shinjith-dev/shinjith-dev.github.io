@@ -61,7 +61,7 @@ function Experiences({ makeActive }) {
             className="text-sm md:text-base text-light-darker hover:text-light-darkest text-end dark:text-dark-500"
           >
             <a
-              href="https://res.cloudinary.com/dqts6qgre/image/upload/v1692633804/sdev/resumesdev_s1sz0f.pdf"
+              href="https://res.cloudinary.com/dqts6qgre/image/upload/v1694947458/sdev/resume_sdev_awlrfb.pdf"
               download="resume.pdf"
               target="_blank"
               rel="noreferrer"
