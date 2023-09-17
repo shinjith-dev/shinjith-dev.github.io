@@ -6,9 +6,8 @@
       "name": "Bisyam",
       "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692552418/sdev/Screenshot_from_2023-08-20_22-56-05_qgxghq.png",
       "description": [
-        "One of the best projects I've worked on to date, it was an incredible learning experience. It is a platform that allows you to communicate with your loved ones while providing a smooth user experience.",
-        "It was a massive project to manage, thanks in part to the personnel behind it.",
-        "This is still being worked on."
+        "Bisyam is an instant messaging platform with an awesome user interface. It provides native and social signin methods to create account and connect with people.",
+        "working on adding and improving features"
       ],
       "technologies": [
         "React",
@@ -21,8 +20,7 @@
       "github_url": "https://github.com/shinjith-dev/bisyam-frotend",
       "featured": true,
       "highlight": false,
-      "created_at": "2023-08-19T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
+      "created_at": "2023-08-19T18:30:00.000Z"
     },
     {
       "_id": "64e24b46b0ee66a9d9b2b870",
@@ -38,8 +36,7 @@
       "github_url": "https://github.com/shinjith-dev/shinjith.live-v2",
       "featured": true,
       "highlight": false,
-      "created_at": "2022-11-25T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
+      "created_at": "2022-11-25T18:30:00.000Z"
     },
     {
       "_id": "64e247f5b0ee66a9d9b2b869",
@@ -55,8 +52,7 @@
       "github_url": "https://github.com/shinjith-dev/movie-loft",
       "featured": true,
       "highlight": false,
-      "created_at": "2022-10-21T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
+      "created_at": "2022-10-21T18:30:00.000Z"
     },
     {
       "_id": "64e2454ccf7f89cea837af9e",
@@ -71,8 +67,7 @@
       "github_url": "https://github.com/shinjith-dev/React-Todo",
       "featured": false,
       "highlight": true,
-      "created_at": "2022-03-09T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
+      "created_at": "2022-03-09T18:30:00.000Z"
     },
     {
       "_id": { "$oid": "64e242f8cf7f89cea837af96" },
@@ -88,8 +83,7 @@
       "github_url": "https://github.com/shinjith-dev/JavaScript-Drum-Kit",
       "featured": false,
       "highlight": true,
-      "created_at": "2022-09-16T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
+      "created_at": "2022-09-16T18:30:00.000Z"
     },
     {
       "_id": "64e240abc14fe0f58000c265",
@@ -104,8 +98,7 @@
       "github_url": "https://github.com/shinjith-dev/basic-javscript-projects",
       "featured": false,
       "highlight": false,
-      "created_at": "2022-09-08T18:30:00.000Z",
-      "__v": { "$numberInt": "0" }
+      "created_at": "2022-09-08T18:30:00.000Z"
     },
     {
       "_id": "64e22b46a213109ddbc551b7",
@@ -119,7 +112,6 @@
       "github_url": "https://github.com/shinjith-dev/JS-Calculator",
       "featured": false,
       "created_at": "2022-08-01T18:30:00.000Z",
-      "__v": { "$numberInt": "0" },
       "highlight": true,
       "thumb_url": "https://res.cloudinary.com/dqts6qgre/image/upload/v1692543439/sdev/Screenshot_from_2023-08-20_20-23-11_xxh6y4.png"
     }

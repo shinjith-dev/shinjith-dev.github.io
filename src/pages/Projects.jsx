@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
-import { projects } from "../components/data/projects.json";
+import { projects } from "../data/projects.json";
 import ProjectItem from "../components/projects/ProjectItem";
 import useDarkMode from "../components/hooks/useDarkMode";
 import { AnimatePresence, motion } from "framer-motion";

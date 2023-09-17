@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Project from "../../components/home/projects/Project";
 import ProjectCard from "../../components/home/projects/ProjectCard";
-import { projects } from "../../components/data/projects.json";
+import { projects } from "../../data/projects.json";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Projects({ makeActive }) {
