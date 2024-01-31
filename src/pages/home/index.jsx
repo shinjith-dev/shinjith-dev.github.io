@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Cover from "./Cover";
 import About from "./About";
@@ -46,7 +46,6 @@ function Home() {
         <About makeActive={(page) => setSection(page)} />
         <Experiences makeActive={(page) => setSection(page)} />
         <Projects makeActive={(page) => setSection(page)} />
-        {/* <Notes makeActive={(page) => setSection(page)} /> */}
         <Services makeActive={(page) => setSection(page)} />
         <Contact makeActive={(page) => setSection(page)} />
         <Footer />

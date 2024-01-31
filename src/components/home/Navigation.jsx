@@ -1,8 +1,7 @@
-/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import stringFns from "../../utils/stringFns";
 import { AnimatePresence, motion } from "framer-motion";
+import stringFns from "../../utils/stringFns";
 
 const navs = ["About", "Experience", "Projects", "Services", "Contact"];
 

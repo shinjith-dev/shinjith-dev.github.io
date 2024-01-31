@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from "react";
 import { PiGithubLogoFill, PiLink } from "react-icons/pi";
 import { motion } from "framer-motion";
@@ -35,10 +36,10 @@ function ProjectCard({ project, index = 0 }) {
           </div>
 
           <div className="text-xs md:text-sm text-light-lighter dark:text-dark-300 transition-all my-2">
-            {project.description.map((desc, index) => (
+            {project.description.map((desc, ind) => (
               <>
                 <p>{desc}</p>
-                {index !== project.description.length - 1 && <br />}
+                {ind !== project.description.length - 1 && <br />}
               </>
             ))}
           </div>

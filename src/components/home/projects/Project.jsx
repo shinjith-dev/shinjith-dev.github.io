@@ -1,4 +1,4 @@
-/* eslint-disable no-nested-ternary */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from "react";
 import { PiGithubLogoFill, PiLink } from "react-icons/pi";
 import { motion } from "framer-motion";
@@ -55,10 +55,10 @@ function Project({ project, left = true, index = 0 }) {
         </div>
 
         <div className="w-fit h-fit text-light-lighter dark:text-dark-300 sm:text-light-lightest dark:sm:text-dark-200 sm:hover:bg-light-dark transition-all text-xs sm:text-sm sm:bg-light sm:p-4 md:p-5 rounded sm:hover:shadow-spread-sm dark:sm:bg-dark-900 dark:sm:hover:bg-dark-900">
-          {project.description.map((desc, index) => (
+          {project.description.map((desc, ind) => (
             <>
               <p>{desc}</p>
-              {index !== project.description.length - 1 && <br />}
+              {ind !== project.description.length - 1 && <br />}
             </>
           ))}
         </div>

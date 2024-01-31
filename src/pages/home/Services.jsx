@@ -41,7 +41,7 @@ function Card({ card, index = 0 }) {
       style={{
         backdropFilter: "blur(16px) saturate(180%)",
         webkitBackdropFilter: "blur(16px) saturate(180%)",
-      }}  
+      }}
       className="border relative z-10 shadow-sm border-light/40 dark:border-dark-950/40 rounded-lg p-3 sm:p-5 h-[min(85vw,210px)] pt-8 flex flex-col gap-1 justify-end from-[#95b3ac]/10 dark:from-dark-900/75 to-[#fff]/25 dark:to-dark-900/25 bg-light-lighter/25 dark:bg-dark-900/25 bg-gradient-to-tr"
     >
       <div className="text-lg sm:text-xl md:text-2xl mb-2 text-light-darkest dark:text-dark-200 transition-all">

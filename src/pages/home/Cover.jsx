@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import run from "../../utils/coverText";
 import { motion } from "framer-motion";
+import run from "../../utils/coverText";
 
 function Cover() {
   const textRef = useRef(null);

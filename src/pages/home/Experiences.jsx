@@ -1,8 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Experience from "../../components/home/experiences/Experience";
 import experienceIllus from "../../assets/illus/experiences.svg";
-import { AnimatePresence, motion } from "framer-motion";
 
 function Experiences({ makeActive }) {
   const sectionRef = useRef(null);

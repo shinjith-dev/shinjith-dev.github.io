@@ -1,6 +1,6 @@
 import React from "react";
-import NavLinks from "./NavLinks";
 import { motion } from "framer-motion";
+import NavLinks from "./NavLinks";
 
 function Footer() {
   const year = new Date().getFullYear();

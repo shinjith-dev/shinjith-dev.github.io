@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import NavLinks from "./NavLinks";
 import useDarkMode from "../hooks/useDarkMode";
-import { motion } from "framer-motion";
 
 function Header() {
   const { change, mode } = useDarkMode();
@@ -24,7 +24,7 @@ function Header() {
   const getIcon = () => {
     if (mode === "light")
       return <MdDarkMode className="text-base sm:text-lg text-light-darkest" />;
-    return <MdLightMode className={`text-base sm:text-lg text-dark-200`} />;
+    return <MdLightMode className="text-base sm:text-lg text-dark-200" />;
   };
 
   const getNextMode = () => {
@@ -65,6 +65,9 @@ function Header() {
             <button
               title={`Switch to ${getNextMode()} mode`}
               onClick={() => change(mode === "light")}
+              style={{
+                transform: `rotate(${mode === "dark" ? "-180deg" : "0deg"})`,
+              }}
               className="rounded-full p-1 sm:p-2 group transition-all hover:shadow-spread-xs"
             >
               {getIcon()}

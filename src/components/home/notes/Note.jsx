@@ -23,7 +23,9 @@ function Note() {
         internal struggle molds our identity.
       </div>
 
-      <div className="text-xs text-end text-light-lighter italic">June 2023</div>
+      <div className="text-xs text-end text-light-lighter italic">
+        June 2023
+      </div>
     </div>
   );
 }

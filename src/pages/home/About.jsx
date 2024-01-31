@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import sdev from "../../assets/images/sdev.jpg";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import sdev from "../../assets/images/sdev.jpg";
 
 function About({ makeActive }) {
   const sectionRef = useRef(null);

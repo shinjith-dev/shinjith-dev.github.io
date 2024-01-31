@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Project from "../../components/home/projects/Project";
 import ProjectCard from "../../components/home/projects/ProjectCard";
 import { projects } from "../../data/projects.json";
-import { AnimatePresence, motion } from "framer-motion";
 
 function Projects({ makeActive }) {
   const sectionRef = useRef(null);
@@ -30,13 +30,9 @@ function Projects({ makeActive }) {
 
   const sort = (a, b) => new Date(a.created_at) < new Date(b.created_at);
 
-  const featuredCount = projects.filter(
-    (project) => PromiseRejectionEvent.featured
-  ).length;
+  const featuredCount = projects.filter((project) => project.featured).length;
 
-  const projectsCount = projects.filter(
-    (project) => PromiseRejectionEvent.highlight
-  ).length;
+  const projectsCount = projects.filter((project) => project.highlight).length;
 
   return (
     <section
