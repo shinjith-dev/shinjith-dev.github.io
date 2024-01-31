@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable prettier/prettier */
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -63,5 +65,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [ require('@tailwindcss/typography'),],
 };

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Footer from "../components/common/Footer";
 import { projects } from "../data/projects.json";
 import ProjectItem from "../components/projects/ProjectItem";
 import useDarkMode from "../components/hooks/useDarkMode";
-import { AnimatePresence, motion } from "framer-motion";
 
 function Projects() {
   useDarkMode();

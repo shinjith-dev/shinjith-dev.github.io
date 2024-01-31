@@ -17,13 +17,13 @@ body,
 /* cursor blink animation */
 .blink {
   -webkit-animation-name: blink;
-          animation-name: blink;
+  animation-name: blink;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
-          animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes blink {
@@ -48,7 +48,8 @@ body,
 .text-gradient-brand {
   background: -webkit-gradient(
       linear,
-      left top, right top,
+      left top,
+      right top,
       from(#b73b1e),
       color-stop(20%, #ee6c4d),
       color-stop(40%, #fbb6a6),
@@ -84,7 +85,8 @@ body,
 .text-gradient-light {
   background: -webkit-gradient(
       linear,
-      left top, right top,
+      left top,
+      right top,
       from(#2a3735),
       color-stop(20%, #374e4b),
       color-stop(80%, #678983),
@@ -120,7 +122,8 @@ body,
 .dark .text-gradient-light {
   background: -webkit-gradient(
       linear,
-      left top, right top,
+      left top,
+      right top,
       from(#606472),
       color-stop(20%, #797c88),
       color-stop(80%, #92959f),
@@ -155,9 +158,9 @@ body,
 
 .gradient-animation {
   -webkit-animation: shine 1s linear infinite;
-          animation: shine 1s linear infinite;
+  animation: shine 1s linear infinite;
   -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 @-webkit-keyframes shine {
@@ -181,7 +184,7 @@ body,
 
 .experience-card:hover {
   -webkit-transform: translate3d(0px, 0px, 5px);
-          transform: translate3d(0px, 0px, 5px);
+  transform: translate3d(0px, 0px, 5px);
 }
 
 /* radius effect */
@@ -196,17 +199,17 @@ body,
     transition: all 0.05s ease-out;
     opacity: 0.5;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     z-index: 1;
     background: -o-radial-gradient(
       circle,
-      rgba(149, 179, 172, 0.25) 0%,
+      rgb(66, 95, 91, 0.15) 0%,
       rgba(255, 255, 255, 0) 70%
     );
     background: radial-gradient(
       circle,
-      rgba(149, 179, 172, 0.25) 0%,
+      rgb(66, 95, 91, 0.15) 0%,
       rgba(255, 255, 255, 0) 70%
     );
   }
@@ -218,21 +221,29 @@ body,
     border-radius: 50%;
     opacity: 1;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-transition: all 0.05s ease-out;
     -o-transition: all 0.05s ease-out;
     transition: all 0.05s ease-out;
     z-index: 1;
     background: -o-radial-gradient(
       circle,
-      rgba(50, 55, 73, 0.75) 0%,
+      rgb(42, 54, 80, 0.5) 0%,
       rgba(50, 55, 73, 0) 70%
     );
     background: radial-gradient(
       circle,
-      rgba(50, 55, 73, 0.75) 0%,
+      rgb(42, 54, 80, 0.5) 0%,
       rgba(50, 55, 73, 0) 70%
     );
   }
+}
+
+.prevent-tailwind {
+  all: initial;
+}
+
+.prevent-tailwind > * {
+  all: initial;
 }

@@ -4,9 +4,10 @@ import Home from "./pages/home";
 import Projects from "./pages/Projects";
 import Loader from "./components/common/Loader";
 import useDarkMode from "./components/hooks/useDarkMode";
+import Notes from "./pages/notes";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false); // true);
   const torch = useRef(null);
 
   useDarkMode();
@@ -16,8 +17,8 @@ function App() {
       const circle = torch.current;
       const left = e.pageX;
       const top = e.pageY;
-      circle.style.left = left + "px";
-      circle.style.top = top + "px";
+      circle.style.left = `${left}px`;
+      circle.style.top = `${top}px`;
     }
   }
 
@@ -37,13 +38,14 @@ function App() {
     );
 
   return (
-    <div className="bg-[#fff] dark:bg-dark-950 relative -z-[3] overflow-hidden">
+    <div className="bg-[#fff] dark:bg-dark-950 -z-[3] relative overflow-hidden">
       <div ref={torch} className="torch-effect" />
 
       <Routes>
         <Route index element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        {/* <Route path="/notes" element={<Notes />} /> */}
+
+        <Route path="/notes" element={<Notes />} />
       </Routes>
     </div>
   );
