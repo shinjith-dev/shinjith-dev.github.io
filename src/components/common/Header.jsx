@@ -56,10 +56,12 @@ function Header() {
         </motion.div>
 
         <div className="flex items-center">
+          <NavLinks />
+
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4, type: "tween" }}
+            transition={{ delay: 1, type: "tween" }}
             className="text-xl mx-2 sm:mx-4"
           >
             <button
@@ -73,8 +75,6 @@ function Header() {
               {getIcon()}
             </button>
           </motion.div>
-
-          <NavLinks />
         </div>
       </div>
     </div>
